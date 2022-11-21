@@ -1,22 +1,23 @@
 import React from 'react'
+import { Circle, ContentArea } from './Styled';
 
 const BackgroundAnimated = () => {
   return (
-    <div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+    <ContentArea>
+      <Circle>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </Circle>
+    </ContentArea>
   )
 }
 
-export default BackgroundAnimated
+export default BackgroundAnimated;
