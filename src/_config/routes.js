@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../pages/Auth/Login/Index";
 import Register from "../pages/Auth/Register/Index";
-import Home from "../pages/Home/Styled";
+import Home from "../pages/Home/Index";
 import NotFound from "../pages/NotFound/Index";
 
 
@@ -10,8 +10,8 @@ export default function MyRoutes() {
     <BrowserRouter>
       <Routes>
           {/* <Route index element={<Home />} /> */}
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="register" element={<Register />} />
+          <Route exact path="Auth/Login" element={<Login />} />
+          <Route exact path="Auth/Register" element={<Register />} />
           <Route exact path="home" element={<Home />} />
           <Route exact path="*" element={<NotFound />} />
       </Routes>
