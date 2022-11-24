@@ -1,54 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LogoDetails, LogoTitle, Sidebar, SidebarDescription, SidebarGroup, SidebarItem, SidebarItemLogout, SidebarLink} from './Styled';
+import Logotype from '../../_assets/img/LOGOTYPE.svg'
+
+
+const SidebarItems = [
+    {
+      link: "/",
+      icon: "bx bx-grid-alt",
+      description: "Cursos"
+    },
+    {
+        link: "/home",
+        icon: "bx bx-grid-alt",
+        description: "Jogos"
+    },
+    {
+        link: "/login",
+        icon: "bx bx-grid-alt",
+        description: "Videos"
+    }
+];
 
 
 const SideBar = () => {
-    
+
+    const [active, setActive] = useState(null);
+
     return (
         <Sidebar className='sidebar'>
-            <LogoDetails>
-                <i className='bx bxl-c-plus-plus'></i>
-                <LogoTitle>Luisfernando</LogoTitle>
-            </LogoDetails>
+                <LogoDetails>
+                    <img src={Logotype} alt="Logotipo" />
+                </LogoDetails>
 
-            <SidebarGroup>
+                <SidebarGroup>
+                    {SidebarItems.map(item => (
+                        <SidebarItem>
+                            <SidebarLink className={`${active === item && 'active'}`}
+                                onClick={() => setActive(item)}>
+                                <i className={item.icon}></i>
+                                <SidebarDescription>{item.description}</SidebarDescription>
+                            </SidebarLink>
+                        </SidebarItem>
+                    ))}
 
-                <SidebarItem>
-                    <SidebarLink href='#'>
-                        <i className='bx bx-grid-alt'></i>
-                        <SidebarDescription>Dashboard</SidebarDescription>
-                    </SidebarLink>
-                </SidebarItem>
+                    
+                    <SidebarItemLogout>
+                        <SidebarLink href='#'>
+                            <i className='bx bx-log-out'></i>
+                            <SidebarDescription>Sair</SidebarDescription>
+                        </SidebarLink>
+                    </SidebarItemLogout>
 
-                <SidebarItem className='active'>
-                    <SidebarLink href='#'>
-                        <i className='bx bx-grid-alt'></i>
-                        <SidebarDescription>Dashboard</SidebarDescription>
-                    </SidebarLink>
-                </SidebarItem>
-
-                <SidebarItem>
-                    <SidebarLink href='#'>
-                        <i className='bx bx-grid-alt'></i>
-                        <SidebarDescription>Dashboard</SidebarDescription>
-                    </SidebarLink>
-                </SidebarItem>
-
-                <SidebarItem>
-                    <SidebarLink href='#'>
-                        <i className='bx bx-grid-alt'></i>
-                        <SidebarDescription>Dashboard</SidebarDescription>
-                    </SidebarLink>
-                </SidebarItem>
-                
-                <SidebarItemLogout>
-                < SidebarLink href='#'>
-                        <i className='bx bx-grid-alt'></i>
-                        <SidebarDescription>Dashboard</SidebarDescription>
-                    </SidebarLink>
-                </SidebarItemLogout>
-            </SidebarGroup>
+                </SidebarGroup>
         </Sidebar>
     )
 }
 export default SideBar;
+
+
+
+

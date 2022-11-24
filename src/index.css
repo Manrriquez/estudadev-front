@@ -4,9 +4,9 @@
   padding: 0px;
   font-family: 'Poppins', sans-serif;
 }
-.active a{
+.active{
   background: #f4282942;
-  color: #F42829;
+  color: #F42829!important;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 

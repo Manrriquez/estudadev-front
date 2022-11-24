@@ -12,7 +12,7 @@ export default function MyRoutes() {
           {/* <Route index element={<Home />} /> */}
           <Route exact path="Auth/Login" element={<Login />} />
           <Route exact path="Auth/Register" element={<Register />} />
-          <Route exact path="home" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route exact path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

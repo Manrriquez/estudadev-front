@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledLayout = styled.div`
     position: relative;
-    background: #f5f5f5;
+    background: #FAFAFA;
     min-height: 100vh;
     width: calc(100% - 240px);
     left: 240px;
@@ -50,11 +50,12 @@ const BoxItem = styled.div`
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 `;
 
-const LayoutButton = styled.div`
+const LayoutButton = styled.a`
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: 500;
+    text-decoration: none;
 
     i {
         font-size: 35px;

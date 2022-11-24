@@ -4,7 +4,13 @@ import { BoxItem, GroupBox, LayoutContent, StyledLayout } from '../../components
 import Navbar from '../../components/Navbar/Index';
 import SideBar from '../../components/Sidebar/Index';
 
-const Home = () => {
+
+
+const Home = (props) => {
+
+  function activeMinus() {
+  }
+
   return (
 
     <>

@@ -54,11 +54,12 @@ const SidebarLink = styled.a`
     width: 100%;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
-    color: #000000ab;
     transition: all 0.4s ease;
-    
+    cursor: pointer;
+    color: #000000ab;
+
     &:hover {
         background: #f4282942;
         color: #F42829;
@@ -72,6 +73,8 @@ const SidebarLink = styled.a`
         font-size: 18px;
     }
 `;
+
+
 
 const SidebarDescription = styled.span`
     font-size: 15px;

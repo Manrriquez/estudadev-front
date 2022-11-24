@@ -4,7 +4,7 @@ const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
     height: 80px;
-    background: #fff;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     position: fixed;
@@ -12,7 +12,6 @@ const StyledNavbar = styled.nav`
     left: 240px;
     z-index: 100;
     padding: 0 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
 
     @media (max-width: 1240px) {
