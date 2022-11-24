@@ -8,8 +8,6 @@ import SideBar from '../../components/Sidebar/Index';
 
 const Home = (props) => {
 
-  function activeMinus() {
-  }
 
   return (
 

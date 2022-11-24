@@ -74,6 +74,10 @@ const SidebarLink = styled.a`
     }
 `;
 
+const SidebarLogotype = styled.img`
+    margin-left: auto;
+    margin-right: auto;
+`;
 
 
 const SidebarDescription = styled.span`
@@ -82,4 +86,5 @@ const SidebarDescription = styled.span`
 `;
 
 
-export {Sidebar, LogoDetails, LogoTitle, SidebarGroup, SidebarItem, SidebarLink, SidebarDescription, SidebarItemLogout};
+export {Sidebar, LogoDetails, LogoTitle, SidebarGroup, SidebarItem,
+     SidebarLink, SidebarDescription, SidebarItemLogout, SidebarLogotype};

@@ -15,7 +15,7 @@ const handleClick = event => {
 
 
 return (
-    <Context.Provider value={[ menuIcon: menuIcon, handleClick: handleClick ]}>
+    <Context.Provider value={{ menuIcon, handleClick }}>
       {props.children}
     </Context.Provider>
 );

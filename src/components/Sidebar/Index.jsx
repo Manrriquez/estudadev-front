@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { LogoDetails, LogoTitle, Sidebar, SidebarDescription, SidebarGroup, SidebarItem, SidebarItemLogout, SidebarLink} from './Styled';
+import { LogoDetails, LogoTitle, Sidebar, SidebarDescription, SidebarGroup, SidebarItem, SidebarItemLogout, SidebarLink, SidebarLogotype} from './Styled';
 import Logotype from '../../_assets/img/LOGOTYPE.svg'
 
 
@@ -29,14 +29,14 @@ const SideBar = () => {
     return (
         <Sidebar className='sidebar'>
                 <LogoDetails>
-                    <img src={Logotype} alt="Logotipo" />
+                    <SidebarLogotype src={Logotype} />
                 </LogoDetails>
 
                 <SidebarGroup>
                     {SidebarItems.map(item => (
                         <SidebarItem>
                             <SidebarLink className={`${active === item && 'active'}`}
-                                onClick={() => setActive(item)}>
+                                onClick={() => setActive(item)} href={item.link}>
                                 <i className={item.icon}></i>
                                 <SidebarDescription>{item.description}</SidebarDescription>
                             </SidebarLink>
