@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayoutButton } from '../Layout/Styled'
+import { LayoutButton, LayoutTitle } from '../Layout/Styled'
 import {NavProfileDetails, NavProfileUsername, StyledNavbar} from './Styled'
 
 const Navbar = () => {
@@ -7,7 +7,7 @@ const Navbar = () => {
     <StyledNavbar>
         <LayoutButton>
          <i className='bx bx-menu sidebarBtn'></i>
-         <span>Dashboard</span>
+         <LayoutTitle>Dashboard</LayoutTitle>
         </LayoutButton>
 
         <NavProfileDetails>

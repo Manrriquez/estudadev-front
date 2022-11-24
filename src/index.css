@@ -4,3 +4,39 @@
   padding: 0px;
   font-family: 'Poppins', sans-serif;
 }
+.active a{
+  background: #f4282942;
+  color: #F42829;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+}
+
+.active ~ .layout-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.active ~ .layout-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+  
+  .sidebar.active {
+    width: 220px;
+  
+  }
+
+  .sidebar.active ~ .layout-section {
+    overflow: hidden;
+    left: 220px;
+  }
+  .sidebar.active ~ .layout-section nav {
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}

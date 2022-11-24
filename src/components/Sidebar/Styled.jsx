@@ -4,33 +4,22 @@ const Sidebar = styled.div`
     position: fixed;
     height: 100%;
     width: 240px;
-    background: #0a2558;
+    background: #FFFFFF;
     transition: all 0.5s ease;
-    
-    .active {
-        width: 60px;
 
-        .layout-section {
-            width: calc(100% - 60px);
-            left: 60px;
-
-            nav {
-                left: 60px;
-                width: calc(100% - 60px);
-            }
-        }
+    @media (max-width: 1240px) {
+          width: 60px;
     }
 `;
 
 const LogoDetails = styled.div`
     height: 80px;
     display: flex;
+    color: #000000ab;
     align-items: center;
 
     i{
         font-size: 28px;
-        font-weight: 500;
-        color: #fff;
         min-width: 60px;
         text-align: center;
     }
@@ -38,9 +27,7 @@ const LogoDetails = styled.div`
 `;
 
 const LogoTitle = styled.span`
-    color: #fff;
     font-size: 24px;
-    font-weight: 500;
 `;
 
 const SidebarGroup = styled.ul`
@@ -56,8 +43,10 @@ const SidebarItem = styled.li`
 
 const SidebarItemLogout = styled.li`
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
+    background: black;
+    padding: 20px 0px 20px 0px;
 `;
 
 const SidebarLink = styled.a`
@@ -65,29 +54,27 @@ const SidebarLink = styled.a`
     width: 100%;
     display: flex;
     align-items: center;
+    font-weight: 600;
     text-decoration: none;
+    color: #000000ab;
     transition: all 0.4s ease;
-
-    .active {
-        background: #081d45;
-    }
     
     &:hover {
-         background: #081d45;
+        background: #f4282942;
+        color: #F42829;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
 
     i{
         min-width: 60px;
         text-align: center;
         font-size: 18px;
-        color: #fff;
     }
 `;
 
 const SidebarDescription = styled.span`
-    color: #fff;
     font-size: 15px;
-    font-weight: 400;
     white-space: nowrap;
 `;
 

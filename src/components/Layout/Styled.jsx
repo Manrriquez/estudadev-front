@@ -7,6 +7,11 @@ const StyledLayout = styled.div`
     width: calc(100% - 240px);
     left: 240px;
     transition: all 0.5s ease;
+
+    @media (max-width: 1240px) {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
 `;
 
 const LayoutContent = styled.div`
@@ -21,6 +26,17 @@ const GroupBox = styled.div`
     flex-wrap: wrap;
     padding: 0 20px;
     margin-bottom: 26px;
+
+    @media (max-width: 1000px) {
+        width: calc(100% / 2 - 15px);
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 550px) {
+          width: 100%;
+          margin-bottom: 15px;
+    }
+      
 `;
 
 const BoxItem = styled.div`
@@ -46,6 +62,12 @@ const LayoutButton = styled.div`
     }
 `;
 
-const LayoutTitle = styled.span``;
+const LayoutTitle = styled.span`
+    color: black;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+`;
 
 export {StyledLayout, LayoutContent, GroupBox, BoxItem, LayoutButton, LayoutTitle};

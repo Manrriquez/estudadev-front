@@ -5,7 +5,7 @@ import { LogoDetails, LogoTitle, Sidebar, SidebarDescription, SidebarGroup, Side
 const SideBar = () => {
     
     return (
-        <Sidebar>
+        <Sidebar className='sidebar'>
             <LogoDetails>
                 <i className='bx bxl-c-plus-plus'></i>
                 <LogoTitle>Luisfernando</LogoTitle>

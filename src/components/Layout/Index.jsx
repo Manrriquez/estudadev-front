@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Index'
-import { StyledNavbar } from '../Navbar/Styled'
 import SideBar from '../Sidebar/Index'
-import { LayoutContent, StyledLayout } from './Styled'
+import {StyledLayout } from './Styled'
 
 const Layout = () => {
   return (
