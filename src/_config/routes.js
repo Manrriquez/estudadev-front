@@ -7,7 +7,6 @@ import ForgotPassword from "../pages/Auth/ForgotPassword/Index";
 import Login from "../pages/Auth/Login/Index";
 import Register from "../pages/Auth/Register/Index";
 import Courses from "../pages/Courses/Index";
-import Home from "../pages/Home/Index";
 import NotFound from "../pages/NotFound/Index";
 import MyCourses from "../pages/Students/Courses/Index";
 import DashboardStudent from "../pages/Students/Dashboard/Index";
