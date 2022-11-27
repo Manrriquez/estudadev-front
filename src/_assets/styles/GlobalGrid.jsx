@@ -53,7 +53,7 @@ const Col = styled.div`
         text-align: center;
         width: 100%;
     }
-    margin-top: ${props => props.size};
+    margin-top: ${props => props.top};
 `;
 
 
