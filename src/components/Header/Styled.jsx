@@ -65,7 +65,7 @@ const HeaderLinkItem = styled.a`
     color: #393536;
 
     &:hover {
-        color: #FCA61F;
+        color: #F42829;
     }
 `;
 
