@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../../components/Header/Index';
 import { Col, Container, Row, StyledSection } from '../../_assets/styles/GlobalGrid';
-import { BackgroundBanner, BackgroundFound, BoxCourses, BoxShadow, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, TitleBenefices, TitleCourses, TitleDescriptionWelcome, TitleWelcome } from './Styled';
+import { BackgroundBanner, BackgroundFound, BoxCourses, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, TitleBenefices, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleWelcome } from './Styled';
 import ProgramingImage from '../../_assets/img/programing-home.svg'
 import JavaIcon from '../../_assets/img/java.svg'
 import DockerIcon from '../../_assets/img/docker.svg'
 import ReactIcon from '../../_assets/img/reactjs.svg'
 import AwsIcon from '../../_assets/img/aws.svg'
+import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
+import { BiCodeCurly } from 'react-icons/bi'
+
+
 
 
 const Welcome = () => {
@@ -16,7 +20,7 @@ const Welcome = () => {
       <main>
           <StyledSection>
               <Container>
-                  <Row>
+                  <Row align="center">
                       <Col top="150px">
                           <div>
                             <TitleWelcome>
@@ -38,28 +42,56 @@ const Welcome = () => {
               </Container>
           </StyledSection>
 
-          <section>
-              <BackgroundBanner>
+          <section style={{marginTop: "15rem"}}>
+              <BackgroundBanner image={BackgroundGeometric}>
                 <Container>
                     <Row>
                         <Col>
                           <div>
                               <TitleCourses>
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing <br />
-                                  <span style={{fontWeight: 500}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+                                  Lorem ipsum, dolor sit amet consectetur<br />
+                                  <TitleCoursesLight>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</TitleCoursesLight>
                               </TitleCourses>
                           </div>
                         </Col>
                         <Col>
                           <div>
                             <FlexBoxCourses>
+                              
                                 <FlexBoxCourses direction="column">
-                                    <BoxCourses>aaaa</BoxCourses>
-                                    <BoxCourses>aaaa</BoxCourses>
+
+                                    <BoxCourses bottom="15px">
+                                      <DescriptionCourses>
+                                        <BiCodeCurly />
+                                        UI/UX
+                                      </DescriptionCourses>
+                                    </BoxCourses>
+
+                                    <BoxCourses top="15px">
+                                      <DescriptionCourses>
+                                        <BiCodeCurly />
+                                        BACKEND
+                                      </DescriptionCourses>
+                                    </BoxCourses>
+
                                 </FlexBoxCourses>
-                                <FlexBoxCourses direction="column">
-                                    <BoxCourses>aaaa</BoxCourses>
-                                    <BoxCourses>aaaa</BoxCourses>
+
+                                <FlexBoxCourses bottom="52px" direction="column">
+
+                                    <BoxCourses bottom="15px">
+                                      <DescriptionCourses>
+                                        <BiCodeCurly />
+                                        FRONTEND
+                                      </DescriptionCourses>
+                                    </BoxCourses>
+
+                                    <BoxCourses top="15px">
+                                      <DescriptionCourses>
+                                        <BiCodeCurly />
+                                        DEVOPS
+                                      </DescriptionCourses>
+                                    </BoxCourses>
+
                                 </FlexBoxCourses>
                             </FlexBoxCourses>
                           </div>

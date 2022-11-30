@@ -37,7 +37,7 @@ const Row = styled.div`
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
-    align-items: center;
+    align-items: ${props => props.align};
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
 
