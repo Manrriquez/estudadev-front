@@ -57,34 +57,52 @@ const BackgroundFound = styled.div`
 	
 `;
 
-const BoxShadow = styled.div`
-	background: #FFFFFF;
-	box-shadow: 0px 15px 60px #0000004f;
-	border-radius: 10px;
-	width: 300px;
-	height: 180px;
-	transition: 4s;
+const BackgroundBanner = styled.div`
+	background: #F42829;
+	width: 100%;
+	padding: 25px 0px 25px 0px
 `;
 
-const FlexCenteredItems = styled.div`
+const TitleCourses = styled.h3`
+	color: #FFFFFF;
+	font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    margin-bottom: 25px;
+`;
+
+const DescriptionCourses = styled.p`
+	color: #FFFFFF;
+`;
+
+const BoxCourses = styled.div`
+	background: #FFFFFF;
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	padding: 20px
+`;
+
+const FlexBoxCourses = styled.div`
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 15px 0px 15px 0px;
-	border-radius: 18px;
-	background-color: #F42829;
+	gap: 15px;
+	justify-content: space-evenly;
+	flex-direction: ${props => props.direction};
 `;
 
 const IconAnimatedApp = styled.img`
 	position: relative;
 	animation: ${AnimatedIconTopAndBottom} 8s linear 0s infinite;
-	left: 35px;
-	bottom: 50px;
-
-	@media (max-width: 992px) {
-		left: auto;
-		right: 55px;
-
-	}
+	left: ${props => props.left};
+	bottom: ${props => props.bottom};
+	top: ${props => props.top};
+	right: ${props => props.right};
+	padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    width: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 40px rgb(9 9 12 / 10%);
+    border-radius: 8px;
 `;
-export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, IconAnimatedApp, BoxShadow, FlexCenteredItems};
+export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, FlexBoxCourses,
+	 IconAnimatedApp, TitleCourses, DescriptionCourses};
