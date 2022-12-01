@@ -171,8 +171,8 @@ const TitleProgram = styled.h3`
 	font-size: 26px;
 	margin-bottom: 65px;
 	border-radius: 7px;
-	margin-left: auto;
-	margin-right: auto;
+	// margin-left: auto;
+	// margin-right: auto;
 
 `;
 
@@ -180,20 +180,104 @@ const ProgramDescriptionBox = styled.div`
 	// border-bottom: 7px solid #F42829;
 	padding-bottom: 10px;
 	font-size: 16px;
-	width: 100%;
-	// max-width: 300px;
+	// width: 100%;
+	max-width: 320px;
 	background: #FFFFFF;
 	// border: 1px solid #00000047;
  	// box-shadow: 0px 4px 20px rgb(0 0 0 / 35%);
 	padding: 10px;
 	color: #4F5665;
 	border-radius: 18px;
-	text-align: center;
+	// text-align: center;
 
 	svg {
 		font-size: 30px;
 	}
 `;
+const FlexLg = styled.div`
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
-export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, FlexBoxCourses, TitleProgram, ProgramDescriptionBox,
-	 IconAnimatedApp, TitleCourses, DescriptionCourses, TitleCoursesLight, BackgroundFoundAbout, TitleBoxAbout, DescriptionBoxAbout};
+    @media (min-width: 992px) {
+        display: flex;
+		gap: 20px;
+    }
+`;
+
+const Wrapper = styled.div`
+    width: 500px;
+    margin: 0 auto;
+
+    @media (max-width: 792px) {
+        width: 100%;
+    
+    }
+`;
+
+const AccordionWrapper = styled.div`
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+`;
+
+const AccordionItem = styled.div`
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
+
+`;
+
+const AccordionContent = styled.div`
+    padding: 20px 0px 20px 0px;
+
+`;
+const AccordionConjuntTitleAndIcon = styled.h4`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+
+    svg {
+        font-size: 21px;
+    }
+`;
+
+const AccordionTitle = styled.div`
+    font-weight: 600;
+    cursor: pointer;
+    color: #393536;
+    padding: 1em 1.5em;
+    border: solid 2px #F42829;
+    border-radius: 16px;
+	font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // box-shadow: 0px 20px 24px 3px rgba(255, 186, 94, 0.24);;
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid currentColor;
+    }
+
+    &:hover {
+        color: #F42829;
+    }
+
+`;
+
+const AccordionBox = styled.div`
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+`;
+
+
+export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, Wrapper, AccordionWrapper,
+	 FlexBoxCourses, TitleProgram, ProgramDescriptionBox, AccordionItem, AccordionContent, AccordionConjuntTitleAndIcon,
+	 IconAnimatedApp, TitleCourses, DescriptionCourses, TitleCoursesLight, AccordionTitle, AccordionBox,
+	  BackgroundFoundAbout, TitleBoxAbout, DescriptionBoxAbout, FlexLg};

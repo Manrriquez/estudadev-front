@@ -40,3 +40,15 @@
     left: 220px;
   }
 }
+
+.accordion-item.collapsed{
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+
+.accordion-title.open::after {
+  content: "";
+  border-top: 0;
+  border-bottom: 5px solid;
+}

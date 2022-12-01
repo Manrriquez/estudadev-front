@@ -1,7 +1,13 @@
 import React from 'react'
 import Header from '../../components/Header/Index';
 import { Col, Container, Row, StyledSection } from '../../_assets/styles/GlobalGrid';
-import { BackgroundBanner, BackgroundFound, BackgroundFoundAbout, BoxCourses, DescriptionBoxAbout, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, ProgramDescriptionBox, TitleBenefices, TitleBoxAbout, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleProgram, TitleWelcome } from './Styled';
+import { AccordionConjuntTitleAndIcon, AccordionContent, AccordionItem, AccordionTitle,
+  AccordionWrapper, BackgroundBanner, BackgroundFound, BackgroundFoundAbout, BoxCourses,
+  DescriptionBoxAbout, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, FlexLg, GroupBenefices,
+  IconAnimatedApp, ListBenefices, ProgramDescriptionBox, TitleBenefices, TitleBoxAbout,
+  TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleProgram, TitleWelcome }
+ from './Styled';
+
 import ProgramingImage from '../../_assets/img/programing-home.svg'
 import JavaIcon from '../../_assets/img/java.svg'
 import DockerIcon from '../../_assets/img/docker.svg'
@@ -10,7 +16,24 @@ import AwsIcon from '../../_assets/img/aws.svg'
 import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import { BiCodeCurly } from 'react-icons/bi'
 
+const Accordion = ({ title, children, icon }) => {
 
+  const [isOpen, setOpen] = React.useState(false);
+
+  return (
+      <AccordionWrapper>
+
+          <AccordionTitle className={`accordion-title ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
+              <AccordionConjuntTitleAndIcon>{icon} {title}</AccordionConjuntTitleAndIcon>
+          </AccordionTitle>
+
+          <AccordionItem className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
+              <AccordionContent>{children}</AccordionContent>
+          </AccordionItem>
+
+      </AccordionWrapper>
+  );
+};
 
 
 const Welcome = () => {
@@ -135,22 +158,58 @@ const Welcome = () => {
                   <Row>
                       <Col top="250px">
                           <div>
-                            <TitleProgram>Lorem ipsum dolor sit, lorem ipsum.</TitleProgram>
-                            <div style={{display: "flex", gap: "15px"}}>
+                              <TitleProgram>Lorem ipsum dolor sit, lorem ipsum.</TitleProgram>
+                              <div style={{display: "flex", gap: "15px"}}>
 
-                                <ProgramDescriptionBox>
-                                  <BiCodeCurly /> <br />
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                                </ProgramDescriptionBox>
-                                <ProgramDescriptionBox>
-                                  <BiCodeCurly /> <br />
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                                </ProgramDescriptionBox>
-                                <ProgramDescriptionBox>
-                                  <BiCodeCurly /> <br />
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                                </ProgramDescriptionBox>
-                            </div>
+                                  <ProgramDescriptionBox>
+                                    <BiCodeCurly /> <br />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                  </ProgramDescriptionBox>
+                                  <ProgramDescriptionBox>
+                                    <BiCodeCurly /> <br />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                  </ProgramDescriptionBox>
+                                  <ProgramDescriptionBox>
+                                    <BiCodeCurly /> <br />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                  </ProgramDescriptionBox>
+                              </div>
+                          </div>
+                          <div style={{marginTop: "80px", marginLeft: "auto", marginRight: "auto"}}>
+                            <FlexLg>
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+                            </FlexLg>
+                            <FlexLg>
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+                            </FlexLg>
+
+                            <FlexLg>
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+
+                              <Accordion title="Lorem Ipsum dolor sit amet, consectur.">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti expedita dolores ipsum nesciunt. Maxime, dolor minus dolore praesentium qui optio
+                              </Accordion>
+                            </FlexLg>
                           </div>
                       </Col>
                   </Row>
