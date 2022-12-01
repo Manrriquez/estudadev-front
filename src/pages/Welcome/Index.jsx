@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Index';
 import { Col, Container, Row, StyledSection } from '../../_assets/styles/GlobalGrid';
-import { BackgroundBanner, BackgroundFound, BoxCourses, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, TitleBenefices, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleWelcome } from './Styled';
+import { BackgroundBanner, BackgroundFound, BackgroundFoundAbout, BoxCourses, DescriptionBoxAbout, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, TitleBenefices, TitleBoxAbout, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleWelcome } from './Styled';
 import ProgramingImage from '../../_assets/img/programing-home.svg'
 import JavaIcon from '../../_assets/img/java.svg'
 import DockerIcon from '../../_assets/img/docker.svg'
@@ -18,7 +18,7 @@ const Welcome = () => {
     <>
       <Header /> 
       <main>
-          <StyledSection>
+          <StyledSection id="home">
               <Container>
                   <Row align="center">
                       <Col top="150px">
@@ -42,7 +42,36 @@ const Welcome = () => {
               </Container>
           </StyledSection>
 
-          <section style={{marginTop: "15rem"}}>
+          <StyledSection id="about">
+              <Container>
+                  <Row>
+                      <Col top="200px">
+                        <FlexBoxCourses>
+                          <BackgroundFoundAbout>
+                            <TitleBoxAbout>Lorem ipsum dolor sit amet.</TitleBoxAbout>
+                            <DescriptionBoxAbout>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
+                            </DescriptionBoxAbout>
+                          </BackgroundFoundAbout>
+
+                          <BackgroundFoundAbout>
+                            <TitleBoxAbout>Lorem ipsum dolor sit amet.</TitleBoxAbout>
+                              <DescriptionBoxAbout>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
+                              </DescriptionBoxAbout>
+                          </BackgroundFoundAbout>
+                        </FlexBoxCourses>
+                      </Col>
+                     
+                  </Row>
+              </Container>
+          </StyledSection>
+
+          <section style={{marginTop: "15rem"}} id="banner">
               <BackgroundBanner image={BackgroundGeometric}>
                 <Container>
                     <Row>
@@ -100,16 +129,6 @@ const Welcome = () => {
                 </Container>
               </BackgroundBanner>
           </section>
-
-          <StyledSection>
-              <Container>
-                  <Row>
-                      <Col top="100px">
-                          aaaaaaaaaaaaaa
-                      </Col>
-                  </Row>
-              </Container>
-          </StyledSection>
       </main>
     </>
   )

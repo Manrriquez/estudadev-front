@@ -94,8 +94,8 @@ const DescriptionCourses = styled.p`
 
 const BoxCourses = styled.div`
 	background: #FFFFFF;
-	border: 1px solid #F2F2F2;
- 	box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+	border: 1px solid #00000047;
+ 	box-shadow: 0px 4px 60px rgb(0 0 0 / 35%);
 	border-radius: 20px;
 	padding: 20px;
 	color: #4F5665;
@@ -140,5 +140,28 @@ const IconAnimatedApp = styled.img`
     box-shadow: 0px 4px 40px rgb(9 9 12 / 10%);
     border-radius: 8px;
 `;
+
+const BackgroundFoundAbout = styled.div`
+	border-radius: 28px;
+	width: 100%;
+	padding: 25px;
+	background: #F42829;
+	border: 1px solid #F42829;
+		box-shadow: 0px 4px 20px rgb(255 0 0 / 35%);
+	color: #ffff;
+	min-height: 300px;
+`;
+
+const TitleBoxAbout = styled.h3`
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 15px;
+`;
+
+const DescriptionBoxAbout = styled.p`
+	font-size: 18px;
+	font-weight: 400;
+`;
+
 export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, FlexBoxCourses,
-	 IconAnimatedApp, TitleCourses, DescriptionCourses, TitleCoursesLight};
+	 IconAnimatedApp, TitleCourses, DescriptionCourses, TitleCoursesLight, BackgroundFoundAbout, TitleBoxAbout, DescriptionBoxAbout};
