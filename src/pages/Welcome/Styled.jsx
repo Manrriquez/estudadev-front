@@ -163,5 +163,37 @@ const DescriptionBoxAbout = styled.p`
 	font-weight: 400;
 `;
 
-export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, FlexBoxCourses,
+const TitleProgram = styled.h3`
+
+	border-bottom: 7px solid #F42829;
+	max-width: 500px;
+	padding-bottom: 10px;
+	font-size: 26px;
+	margin-bottom: 65px;
+	border-radius: 7px;
+	margin-left: auto;
+	margin-right: auto;
+
+`;
+
+const ProgramDescriptionBox = styled.div`
+	// border-bottom: 7px solid #F42829;
+	padding-bottom: 10px;
+	font-size: 16px;
+	width: 100%;
+	// max-width: 300px;
+	background: #FFFFFF;
+	// border: 1px solid #00000047;
+ 	// box-shadow: 0px 4px 20px rgb(0 0 0 / 35%);
+	padding: 10px;
+	color: #4F5665;
+	border-radius: 18px;
+	text-align: center;
+
+	svg {
+		font-size: 30px;
+	}
+`;
+
+export {TitleDescriptionWelcome, TitleWelcome, BackgroundFound, BackgroundBanner, BoxCourses, FlexBoxCourses, TitleProgram, ProgramDescriptionBox,
 	 IconAnimatedApp, TitleCourses, DescriptionCourses, TitleCoursesLight, BackgroundFoundAbout, TitleBoxAbout, DescriptionBoxAbout};

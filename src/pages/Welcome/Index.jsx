@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Index';
 import { Col, Container, Row, StyledSection } from '../../_assets/styles/GlobalGrid';
-import { BackgroundBanner, BackgroundFound, BackgroundFoundAbout, BoxCourses, DescriptionBoxAbout, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, TitleBenefices, TitleBoxAbout, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleWelcome } from './Styled';
+import { BackgroundBanner, BackgroundFound, BackgroundFoundAbout, BoxCourses, DescriptionBoxAbout, DescriptionCourses, FlexBoxCourses, FlexCenteredItems, GroupBenefices, IconAnimatedApp, ListBenefices, ProgramDescriptionBox, TitleBenefices, TitleBoxAbout, TitleCourses, TitleCoursesLight, TitleDescriptionWelcome, TitleProgram, TitleWelcome } from './Styled';
 import ProgramingImage from '../../_assets/img/programing-home.svg'
 import JavaIcon from '../../_assets/img/java.svg'
 import DockerIcon from '../../_assets/img/docker.svg'
@@ -71,7 +71,7 @@ const Welcome = () => {
               </Container>
           </StyledSection>
 
-          <section style={{marginTop: "15rem"}} id="banner">
+          <section style={{marginTop: "11rem"}} id="banner">
               <BackgroundBanner image={BackgroundGeometric}>
                 <Container>
                     <Row>
@@ -129,6 +129,58 @@ const Welcome = () => {
                 </Container>
               </BackgroundBanner>
           </section>
+
+          <StyledSection>
+              <Container>
+                  <Row>
+                      <Col top="250px">
+                          <div>
+                            <TitleProgram>Lorem ipsum dolor sit, lorem ipsum.</TitleProgram>
+                            <div style={{display: "flex", gap: "15px"}}>
+
+                                <ProgramDescriptionBox>
+                                  <BiCodeCurly /> <br />
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                </ProgramDescriptionBox>
+                                <ProgramDescriptionBox>
+                                  <BiCodeCurly /> <br />
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                </ProgramDescriptionBox>
+                                <ProgramDescriptionBox>
+                                  <BiCodeCurly /> <br />
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                                </ProgramDescriptionBox>
+                            </div>
+                          </div>
+                      </Col>
+                  </Row>
+              </Container>
+          </StyledSection>
+
+          <StyledSection>
+              <Container>
+                  <Row>
+                      <Col top="10rem">aaaaaaa</Col>
+                  </Row>
+              </Container>
+          </StyledSection>
+
+
+          <StyledSection>
+              <Container>
+                  <Row>
+                      <Col>aaaaaaa</Col>
+                  </Row>
+              </Container>
+          </StyledSection>
+
+          <StyledSection>
+              <Container>
+                  <Row>
+                      <Col>aaaaaaa</Col>
+                  </Row>
+              </Container>
+          </StyledSection>
       </main>
     </>
   )
