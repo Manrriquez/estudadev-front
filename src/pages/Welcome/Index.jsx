@@ -15,7 +15,6 @@ import ReactIcon from '../../_assets/img/reactjs.svg'
 import AwsIcon from '../../_assets/img/aws.svg'
 import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import { BiCodeCurly } from 'react-icons/bi'
-import { Carousel, ScrollingCarousel } from '@trendyol-js/react-carousel';
 
 const Accordion = ({ title, children, icon }) => {
 
@@ -223,15 +222,6 @@ const Welcome = () => {
                       <Col top="10rem">
                         <div>
                           <TitleProgram>BLOG</TitleProgram>
-                          <div>
-                          <ScrollingCarousel>
-                                  <div>We love Web 🌐</div>
-                                  <div>We love Web 🌐</div>
-                                  <div>We love Web 🌐</div>
-                                  <div>We love Web 🌐</div>
-                                  
-                            </ScrollingCarousel>
-                          </div>
                         </div>
                       </Col>
                   </Row>

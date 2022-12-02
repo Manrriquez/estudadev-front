@@ -1,8 +1,9 @@
 import React from 'react'
+import Sidebar from '../../../components/Sidebar/Index';
 
 const DashboardStudent = () => {
   return (
-    <div>Dashboard</div>
+    <Sidebar />
   )
 }
 

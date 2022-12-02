@@ -1,62 +1,63 @@
-import React, { useState } from 'react'
-import { LogoDetails, LogoTitle, Sidebar, SidebarDescription, SidebarGroup, SidebarItem, SidebarItemLogout, SidebarLink, SidebarLogotype} from './Styled';
-import Logotype from '../../_assets/img/LOGOTYPE.svg'
+import React, { useState } from 'react';
+import { AlignLeftOutlined, AlignRightOutlined, MenuOutlined, UploadOutlined, UserOutlined, VideoCameraOutlined,} from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 
+
+
+
+
+
+const { Header, Sider, Content } = Layout;
 
 const SidebarItems = [
     {
-      link: "/",
-      icon: "bx bx-grid-alt",
-      description: "Cursos"
+      key: '1',
+      icon: <UserOutlined />,
+      label: 'nav 1',
     },
     {
-        link: "/home",
-        icon: "bx bx-grid-alt",
-        description: "Jogos"
+      key: '2',
+      icon: <VideoCameraOutlined />,
+      label: 'nav 2',
     },
     {
-        link: "/login",
-        icon: "bx bx-grid-alt",
-        description: "Videos"
-    }
-];
+      key: '3',
+      icon: <UploadOutlined />,
+      label: 'nav 3',
+    },
+]
 
+const Sidebar = () => {
 
-const SideBar = () => {
+  const [collapsed, setCollapsed] = useState(false);
 
-    const [active, setActive] = useState(null);
+  return (
 
-    return (
-        <Sidebar className='sidebar'>
-                <LogoDetails>
-                    <SidebarLogotype src={Logotype} />
-                </LogoDetails>
+    <Layout style={{height: "100vh"}}>
 
-                <SidebarGroup>
-                    {SidebarItems.map(item => (
-                        <SidebarItem>
-                            <SidebarLink className={`${active === item && 'active'}`}
-                                onClick={() => setActive(item)} href={item.link}>
-                                <i className={item.icon}></i>
-                                <SidebarDescription>{item.description}</SidebarDescription>
-                            </SidebarLink>
-                        </SidebarItem>
-                    ))}
+      <Sider trigger={null} collapsible collapsed={collapsed}>
+            <div className="logo" />
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} items={SidebarItems} />
+      </Sider>
 
-                    
-                    <SidebarItemLogout>
-                        <SidebarLink href='#'>
-                            <i className='bx bx-log-out'></i>
-                            <SidebarDescription>Sair</SidebarDescription>
-                        </SidebarLink>
-                    </SidebarItemLogout>
+      <Layout className="site-layout">
+        <Header className="site-layout-background" style={{ padding: 0,}}>
+          {React.createElement(collapsed ? AlignLeftOutlined : MenuOutlined, {
+            className: 'trigger',
+            onClick: () => setCollapsed(!collapsed),
+          })}
+        </Header>
 
-                </SidebarGroup>
-        </Sidebar>
-    )
-}
-export default SideBar;
+        <Content className="site-layout-background" style={{ margin: '24px 16px', padding: 24, minHeight: 280, }}>
+          Content
+        </Content>
 
+      </Layout>
+      
+    </Layout>
+  );
+};
+export default Sidebar;
 
 
 
