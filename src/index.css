@@ -1,78 +1,70 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 
-*{
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Poppins', sans-serif;
-}
-.active{
-  background: #f4282942;
-  color: #F42829!important;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-}
-
-.active ~ .layout-section{
-  width: calc(100% - 60px);
-  left: 60px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-.active ~ .layout-section nav {
-  left: 60px;
-  width: calc(100% - 60px);
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-
-/* Responsive Media Query */
-@media (max-width: 1240px) {
-  
-  .sidebar.active {
-    width: 220px;
-  
-  }
-
-  .sidebar.active ~ .layout-section {
-    overflow: hidden;
-    left: 220px;
-  }
-  .sidebar.active ~ .layout-section nav {
-    width: calc(100% - 220px);
-    left: 220px;
-  }
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.accordion-item.collapsed{
-  max-height: 0;
-  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-
-.accordion-title.open::after {
-  content: "";
-  border-top: 0;
-  border-bottom: 5px solid;
-}
-
-
-
-.trigger {
-  padding: 0 24px;
-  font-size: 18px;
-  line-height: 64px;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.trigger:hover {
-  color: #1890ff;
-}
-
-.logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.site-layout .site-layout-background {
-  background: #fff;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
