@@ -1,15 +1,11 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "../pages/NotFound/Index";
 import Welcome from "../pages/Welcome/Index";
-import ThemeGlobal from "./ThemeGlobal";
 
 
 
 export default function MyRoutes() {
     return (
-      <ThemeProvider theme={ThemeGlobal}>
-      <CssBaseline />
       <BrowserRouter>
         <Routes>
             <Route exact path="/" element={<Welcome />} />
@@ -39,6 +35,5 @@ export default function MyRoutes() {
             <Route exact path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      </ThemeProvider>
     );
   }
