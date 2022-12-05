@@ -1,10 +1,12 @@
 import './App.css'
-import MyRoutes from './config/routes'
+import MyRoutes from './_config/routes'
+
+
 
 function App() {
 
   return (
-    <MyRoutes />
+      <MyRoutes />
   )
 }
 
