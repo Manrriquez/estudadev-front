@@ -12,6 +12,7 @@ import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Carousel from 'react-material-ui-carousel';
+import BlogImage from '../../_assets/img/background-blog.jpg'
 
 
 const StyledTypograpyTitle = styled(Typography)(({ theme }) => ({
@@ -280,46 +281,51 @@ const StyledAccordion = styled(Accordion)(({ theme }) => ({
 
 
 const StyledPaperBlog = styled(Paper)(({ theme }) => ({
-    padding: '10px',
+    padding: '20px 55px 20px 55px',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     minHeight: '25rem',
-    backgroundColor: 'linear-gradient(90deg, rgba(10, 10, 10, .8) 0, rgba(10, 10, 10, 0) 50%)'
 }));
 
 
 
 var itemsCarousel = [
   {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
-      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+      name: "Probably the most random thing you have ever seen!",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+      src: BlogImage,
+      link: "https://localhost:5173",
   },
   {
-      name: "Random Name #2",
-      description: "Hello World!",
-      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
-  },
-  {
-    name: "Random Name #1",
-    description: "Probably the most random thing you have ever seen!",
-    src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
-  },
-  {
-      name: "Random Name #2",
-      description: "Hello World!",
-      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
-  },
-  {
-    name: "Random Name #1",
-    description: "Probably the most random thing you have ever seen!",
-    src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
-  },
-  {
-      name: "Random Name #2",
-      description: "Hello World!",
-      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
-  }
+    name: "Probably the most random thing you have ever seen!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
 ]
 
 const Welcome = () => {
@@ -504,17 +510,29 @@ const Welcome = () => {
                     <Carousel animation='slide' interval={5000} indicators={false} navButtonsAlwaysVisible={true}
                     navButtonsProps={{style: {backgroundColor: '#F42829'}}}>
                       {itemsCarousel.map((item) => (
-                        <StyledPaperBlog sx={{backgroundImage: `url(${item.src})`}}>
-                            <h2>{item.name}</h2>
-                            <p>{item.description}</p>
-                            <Button className="CheckButton">
-                                Check it out!
-                            </Button>
+                        <StyledPaperBlog sx={{backgroundImage: `linear-gradient(180deg,rgba(31,31,31,0) 23.22%,#251f1f 92.31%), url(${item.src})`}}>
+                            <Box sx={{maxWidth: '670px'}}>
+                                <Typography component="h2" sx={{fontSize: 'clamp(24px, 3vw, 34px)', color: '#FFFFFF'}} mt={5}>
+                                    {item.name}
+                                </Typography>
+                                <Typography component="p" sx={{fontSize: '20px', color: '#FFFFFF', fontWeight: 400,
+                                 whiteSpace: {xs: 'nowrap', md: 'initial'}, overflow: {xs: 'hidden', md: 'initial'},
+                                  textOverflow: {xs: 'ellipsis',md: 'initial'}, maxWidth: {xs: '70ch', md: '670px'} }} mt={2}>
+                                  {item.description}
+                                </Typography>
+                                <Button variant="contained" color="primary" sx={{px: 5, mt: {xs: 7, md: 3}, textAlign: 'center'}} size="medium" component="a" href={item.link}>
+                                    Lorem, ipsum dolor sit amet
+                                  </Button>
+                            </Box>
                        </StyledPaperBlog>
                       ))}
                     </Carousel>
                   </Box>
               </Grid>
+          </Box>
+
+          <Box component="section" mt={20}>
+            aaaaaaaaaaaaaaaaaaa
           </Box>
       </Container>
     </>
