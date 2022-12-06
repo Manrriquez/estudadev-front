@@ -11,6 +11,9 @@ const ThemeGlobal = createTheme({
           main: '#0B132A',
           contrastText: '#fff',
         },
+        teste: {
+          main: '#FFFFFF',
+        },
     },
     typography: {
         subtitle1: {
