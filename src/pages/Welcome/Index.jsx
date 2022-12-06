@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Box, Container, Grid, Paper, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Container, Grid, Paper, Typography } from '@mui/material';
 import React from 'react'
 import Navbar from '../../components/Navbar/Index';
 import ProgramingHome from '../../_assets/img/programing-home.svg';
@@ -10,7 +10,7 @@ import ReactIcon from '../../_assets/img/reactjs.svg';
 import ThemeGlobal from '../../_config/ThemeGlobal';
 import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 const StyledTypograpyTitle = styled(Typography)(({ theme }) => ({
@@ -124,20 +124,6 @@ const StyledAvatarAnimation = styled(Avatar)(({ theme }) => ({
         transform: "translateY(0)",
       }
     },
-}));
-
-const StyledBoxAbout = styled(Box)(({ theme }) => ({
-    backgroundColor: '#F42829',
-    padding: '25px',
-    border: '1px solid #F42829',
-    borderRadius: '28px'
-}));
-
-const StyledTypograpyTitleAbout = styled(Typography)(({ theme }) => ({
-  fontWeight: 700,
-  fontSize: 'clamp(20px, 3vw, 22px)',
-  color: '#FFFF',
-  marginBottom: '15px'
 }));
 
 const StyledTypograpyTitleDescription = styled(Typography)(({ theme }) => ({
@@ -260,6 +246,38 @@ const StyledTypograpyPrograming = styled(Typography)(({ theme }) => ({
   fontSize: 'clamp(17px, 3vw, 18px)',
 }));
 
+const StyledTypographyLine = styled(Typography)(({ theme }) => ({
+  fontSize: 'clamp(23px, 3vw, 26px)',
+  borderBottom: '7px solid #F42829',
+  color: '#0B132A',
+  borderRadius: '7px',
+  fontWeight: 700,
+  marginBottom: '65px',
+  maxWidth: '100%'
+}));
+
+
+
+const StyledBoxDoubt = styled(Box)(({ theme }) => ({
+    fontSize: '16px',
+    maxWidth: '320px',
+    flexDirection: 'column',
+    display: 'flex',
+    background: '#FFFFFF',
+    padding: '10px',
+    color: '#4F5665',
+    borderRadius: '18px',
+}));
+
+const StyledAccordion = styled(Accordion)(({ theme }) => ({
+  border: 'solid 2px #F42829',
+  borderRadius: '16px!important',
+  marginBottom: '10px',
+  marginTop: '10px',
+  padding: '10px',
+}));
+
+
 
 const Welcome = () => {
   return (
@@ -293,31 +311,6 @@ const Welcome = () => {
 
               </Grid>  
           </Box>      
-
-          <Box component="section" mt={20}>
-              <Grid container spacing={2} sx={{alignItems: 'center'}}>
-                  <Grid item xs={12} md={6}>
-                      <StyledBoxAbout>
-                        <StyledTypograpyTitleAbout component="h3">Lorem ipsum dolor sit amet.</StyledTypograpyTitleAbout>
-                        <StyledTypograpyTitleDescription component="p">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
-                        </StyledTypograpyTitleDescription>
-                      </StyledBoxAbout>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                      <StyledBoxAbout>
-                        <StyledTypograpyTitleAbout component="h3">Lorem ipsum dolor sit amet.</StyledTypograpyTitleAbout>
-                        <StyledTypograpyTitleDescription component="p">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo.
-                        </StyledTypograpyTitleDescription>
-                      </StyledBoxAbout>
-                  </Grid>
-              </Grid>
-          </Box>
 
           <Box component="section" mt={20}>
             <StyledBoxPrograming>
@@ -367,6 +360,96 @@ const Welcome = () => {
                     </Grid>
               </Grid>
             </StyledBoxPrograming>
+          </Box>
+          <Box component="section" mt={{md: 20, xs: 50}}>
+              <Grid container>
+                  <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem, molestiae?</StyledTypographyLine>
+                  <Grid container spacing={3}>
+                    <Grid item xs={12} md={3}>
+                      <StyledBoxDoubt>
+                        <DataObjectIcon sx={{fontSize: '36px'}}/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                      </StyledBoxDoubt>
+                    </Grid>
+                    <Grid item xs={12} md={3}>
+                      <StyledBoxDoubt>
+                        <DataObjectIcon sx={{fontSize: '36px'}}/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                      </StyledBoxDoubt>
+                    </Grid>
+                    <Grid item xs={12} md={3}>
+                      <StyledBoxDoubt>
+                        <DataObjectIcon sx={{fontSize: '36px'}}/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                      </StyledBoxDoubt>
+                    </Grid>
+                  </Grid>
+
+                  <Box mt={{md: 15, xs: 6}}>
+                    <Box sx={{display: {md: 'flex'}, gap: '15px'}}>
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+                    </Box>
+
+                    <Box sx={{display: {md: 'flex'}, gap: '15px'}}>
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+                    </Box>
+                  </Box>
+              </Grid>
           </Box>
       </Container>
     </>
