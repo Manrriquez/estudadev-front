@@ -16,9 +16,82 @@ import BlogImage from '../../_assets/img/background-blog.jpg';
 import IlustrationComputer from '../../_assets/img/ilustration-computer-accordion.svg';
 import IlustrationReact from '../../_assets/img/ilustration-react-accordion.svg';
 import IlustrationHtml from '../../_assets/img/ilustration-html-accordion.svg';
+import AvatarImage from '../../_assets/img/avatar.jpg';
+import Footer from '../../components/Footer/Index';
 
 
 
+var itemsCarousel = [
+  {
+      name: "Probably the most random thing you have ever seen!",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+      src: BlogImage,
+      link: "https://localhost:5173",
+  },
+  {
+    name: "Probably the most random thing you have ever seen!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+{
+  name: "Probably the most random thing you have ever seen!",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+    src: BlogImage,
+    link: "https://localhost:5173",
+},
+]
+
+var itemsDepoiment = [
+  {
+      avatar: AvatarImage,
+      name: "Probably the most random",
+      depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+  },
+  {
+    avatar: AvatarImage,
+    name: "Probably the most random",
+    depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+},
+{
+  avatar: AvatarImage,
+  name: "Probably the most random",
+  depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+},
+{
+  avatar: AvatarImage,
+  name: "Probably the most random",
+  depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+},
+{
+  avatar: AvatarImage,
+  name: "Probably the most random",
+  depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+},
+{
+  avatar: AvatarImage,
+  name: "Probably the most random",
+  depoiment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
+},
+]
 
 const StyledTypograpyTitle = styled(Typography)(({ theme }) => ({
     fontWeight: 500,
@@ -263,8 +336,6 @@ const StyledTypographyLine = styled(Typography)(({ theme }) => ({
   maxWidth: '100%'
 }));
 
-
-
 const StyledBoxDoubt = styled(Box)(({ theme }) => ({
     fontSize: '16px',
     maxWidth: '320px',
@@ -380,257 +451,245 @@ const StyledAccordionItemsAnimation = styled(Avatar)(({ theme }) => ({
   },
 }));
 
-var itemsCarousel = [
-  {
-      name: "Probably the most random thing you have ever seen!",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-      src: BlogImage,
-      link: "https://localhost:5173",
-  },
-  {
-    name: "Probably the most random thing you have ever seen!",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-    src: BlogImage,
-    link: "https://localhost:5173",
-},
-{
-  name: "Probably the most random thing you have ever seen!",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-    src: BlogImage,
-    link: "https://localhost:5173",
-},
-{
-  name: "Probably the most random thing you have ever seen!",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-    src: BlogImage,
-    link: "https://localhost:5173",
-},
-{
-  name: "Probably the most random thing you have ever seen!",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-    src: BlogImage,
-    link: "https://localhost:5173",
-},
-{
-  name: "Probably the most random thing you have ever seen!",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo, Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo.",
-    src: BlogImage,
-    link: "https://localhost:5173",
-},
-]
 
 const Welcome = () => {
   return (
     <>
       <Navbar />
-      <Container sx={{marginTop: 5}} component="main" maxWidth="lg">
-          <Box component="section">
-              <Grid container spacing={2} sx={{alignItems: 'center', mt: 10}}>
-                  <Grid item  sm={12}  xs={12} md={6}>
-                    <Box>
-                        <StyledTypograpyTitle component="h1">
-                          Lorem ipsum dolor sit amet accusamus quaerat iusto accusantium.
-                        </StyledTypograpyTitle>
-                        <StyledTypograpyDescription component="p">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo?
-                      </StyledTypograpyDescription>
-                    </Box>
-                  </Grid>
-
-                  <Grid item sm={12} xs={12} md={6} sx={{mt: {xs: '5rem', md: 0} }}>
-                    <Box sx={{width: '100%'}}>
-                        <StyledBoxBackground sx={{display: 'flex', justifyContent: 'space-around'}}>
-                          <StyledAvatarAnimation src={JavaIcon} sx={{top: '100px', animation: 'animationAvatar1 8s linear 0s infinite'}}/>
-                          <StyledAvatarAnimation src={DockerIcon} sx={{bottom: {md: '50px', xs: '40px'},
-                           animation: 'animationAvatar2 8s linear 0s infinite'}}/>
-                          <StyledAvatarAnimation src={AwsIcon} sx={{top: {md: '58px', xs: '20px'}, animation: 'animationAvatar1 8s linear 0s infinite'}}/>
-                          <StyledAvatarAnimation src={ReactIcon} sx={{animation: 'animationAvatar2 8s linear 0s infinite'}}/>
-                        </StyledBoxBackground>
-                    </Box>
-                  </Grid>
-
-              </Grid>  
-          </Box>      
-
-          <Box component="section" mt={20}>
-            <StyledBoxPrograming>
-              <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
-                      <Typography sx={{textAlign: 'center', fontSize: 'clamp(28px, 3vw, 32px)', fontWeight: 700, color: '#ffffff'}} component="h2" mt={5}>
-                        Lorem ipsum dolor sit amet.
-                      </Typography>
-                        <StyledTypograpyTitleDescription component="p" sx={{textAlign: 'center'}}>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
-                        </StyledTypograpyTitleDescription>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <Box sx={{display: 'flex', gap: '15px', justifyContent: 'space-evenly'}}>
-                        <Box sx={{position: 'relative', top: '25px'}}>
-                            <StyledBoxProgramingBlock sx={{animation: 'animationBox2 8s linear 0s infinite'}}>
-                              <StyledTypograpyPrograming component="p">
-                                <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
-                                UI/UX
-                              </StyledTypograpyPrograming>
-                            </StyledBoxProgramingBlock>
-
-                            <StyledBoxProgramingBlock sx={{animation: 'animationBox1 8s linear 0s infinite'}}>
-                              <StyledTypograpyPrograming>
-                                <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
-                                UI/UX
-                              </StyledTypograpyPrograming>
-                            </StyledBoxProgramingBlock>
-                        </Box>
-                        <Box sx={{position: 'relative', bottom: '35px'}}>
-                            <StyledBoxProgramingBlock sx={{animation: 'animationBox1 8s linear 0s infinite'}}>
-                              <StyledTypograpyPrograming>
-                                <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
-                                UI/UX
-                              </StyledTypograpyPrograming>
-                            </StyledBoxProgramingBlock>
-                            
-                            <StyledBoxProgramingBlock sx={{animation: 'animationBox2 8s linear 0s infinite'}}>
-                              <StyledTypograpyPrograming>
-                                <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
-                                UI/UX
-                              </StyledTypograpyPrograming>
-                            </StyledBoxProgramingBlock>
-
-                        </Box>
+        <Container sx={{my: 5}} component="main" maxWidth="lg">
+            <Box component="section">
+                <Grid container spacing={2} sx={{alignItems: 'center', mt: 10}}>
+                    <Grid item  sm={12}  xs={12} md={6}>
+                      <Box>
+                          <StyledTypograpyTitle component="h1">
+                            Lorem ipsum dolor sit amet accusamus quaerat iusto accusantium.
+                          </StyledTypograpyTitle>
+                          <StyledTypograpyDescription component="p">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptates! Ex ipsam ducimus est debitis? Perferendis amet provident quis voluptatem, iste aperiam sint aliquam illo?
+                        </StyledTypograpyDescription>
                       </Box>
                     </Grid>
-              </Grid>
-            </StyledBoxPrograming>
-          </Box>
 
-          <Box component="section" mt={{md: 20, xs: 50}}>
-              <Grid container>
-                  <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem, molestiae?</StyledTypographyLine>
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} md={3}>
-                      <StyledBoxDoubt>
-                        <DataObjectIcon sx={{fontSize: '36px'}}/>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                      </StyledBoxDoubt>
+                    <Grid item sm={12} xs={12} md={6} sx={{mt: {xs: '5rem', md: 0} }}>
+                      <Box sx={{width: '100%'}}>
+                          <StyledBoxBackground sx={{display: 'flex', justifyContent: 'space-around'}}>
+                            <StyledAvatarAnimation src={JavaIcon} sx={{top: '100px', animation: 'animationAvatar1 8s linear 0s infinite'}}/>
+                            <StyledAvatarAnimation src={DockerIcon} sx={{bottom: {md: '50px', xs: '40px'},
+                            animation: 'animationAvatar2 8s linear 0s infinite'}}/>
+                            <StyledAvatarAnimation src={AwsIcon} sx={{top: {md: '58px', xs: '20px'}, animation: 'animationAvatar1 8s linear 0s infinite'}}/>
+                            <StyledAvatarAnimation src={ReactIcon} sx={{animation: 'animationAvatar2 8s linear 0s infinite'}}/>
+                          </StyledBoxBackground>
+                      </Box>
                     </Grid>
-                    <Grid item xs={12} md={3}>
-                      <StyledBoxDoubt>
-                        <DataObjectIcon sx={{fontSize: '36px'}}/>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                      </StyledBoxDoubt>
+
+                </Grid>  
+            </Box>      
+
+            <Box component="section" mt={20}>
+              <StyledBoxPrograming>
+                <Grid container spacing={2}>
+                      <Grid item xs={12} md={6}>
+                        <Typography sx={{textAlign: 'center', fontSize: 'clamp(28px, 3vw, 32px)', fontWeight: 700, color: '#ffffff'}} component="h2" mt={5}>
+                          Lorem ipsum dolor sit amet.
+                        </Typography>
+                          <StyledTypograpyTitleDescription component="p" sx={{textAlign: 'center'}}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ad dolore aut quibusdam maxime explicabo,
+                          </StyledTypograpyTitleDescription>
+                      </Grid>
+                      <Grid item xs={12} md={6}>
+                        <Box sx={{display: 'flex', gap: '15px', justifyContent: 'space-evenly'}}>
+                          <Box sx={{position: 'relative', top: '25px'}}>
+                              <StyledBoxProgramingBlock sx={{animation: 'animationBox2 8s linear 0s infinite'}}>
+                                <StyledTypograpyPrograming component="p">
+                                  <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
+                                  UI/UX
+                                </StyledTypograpyPrograming>
+                              </StyledBoxProgramingBlock>
+
+                              <StyledBoxProgramingBlock sx={{animation: 'animationBox1 8s linear 0s infinite'}}>
+                                <StyledTypograpyPrograming>
+                                  <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
+                                  UI/UX
+                                </StyledTypograpyPrograming>
+                              </StyledBoxProgramingBlock>
+                          </Box>
+                          <Box sx={{position: 'relative', bottom: '35px'}}>
+                              <StyledBoxProgramingBlock sx={{animation: 'animationBox1 8s linear 0s infinite'}}>
+                                <StyledTypograpyPrograming>
+                                  <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
+                                  UI/UX
+                                </StyledTypograpyPrograming>
+                              </StyledBoxProgramingBlock>
+                              
+                              <StyledBoxProgramingBlock sx={{animation: 'animationBox2 8s linear 0s infinite'}}>
+                                <StyledTypograpyPrograming>
+                                  <DataObjectIcon sx={{ml: 'auto', mr: 'auto', fontSize: '26px'}}/>
+                                  UI/UX
+                                </StyledTypograpyPrograming>
+                              </StyledBoxProgramingBlock>
+
+                          </Box>
+                        </Box>
+                      </Grid>
+                </Grid>
+              </StyledBoxPrograming>
+            </Box>
+
+            <Box component="section" mt={{md: 20, xs: 50}}>
+                <Grid container>
+                    <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem, molestiae?</StyledTypographyLine>
+                    <Grid container spacing={3}>
+                      <Grid item xs={12} md={3}>
+                        <StyledBoxDoubt>
+                          <DataObjectIcon sx={{fontSize: '36px'}}/>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                        </StyledBoxDoubt>
+                      </Grid>
+                      <Grid item xs={12} md={3}>
+                        <StyledBoxDoubt>
+                          <DataObjectIcon sx={{fontSize: '36px'}}/>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                        </StyledBoxDoubt>
+                      </Grid>
+                      <Grid item xs={12} md={3}>
+                        <StyledBoxDoubt>
+                          <DataObjectIcon sx={{fontSize: '36px'}}/>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
+                        </StyledBoxDoubt>
+                      </Grid>
                     </Grid>
-                    <Grid item xs={12} md={3}>
-                      <StyledBoxDoubt>
-                        <DataObjectIcon sx={{fontSize: '36px'}}/>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, distinctio!
-                      </StyledBoxDoubt>
-                    </Grid>
+
+                    <Box mt={4} sx={{display: {xs: 'initial', md: 'flex'}, gap: '20px', width: '100%', alignItems: 'center'}}>
+                      <Box sx={{maxWidth: '700px'}}>
+                              <StyledAccordion>
+                                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                    <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                  </AccordionSummary>
+
+                                  <AccordionDetails>
+                                    <Typography>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    </Typography>
+                                  </AccordionDetails>
+                              </StyledAccordion>
+
+                              <StyledAccordion>
+                                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                    <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                  </AccordionSummary>
+
+                                  <AccordionDetails>
+                                    <Typography>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    </Typography>
+                                  </AccordionDetails>
+                              </StyledAccordion>
+
+                              <StyledAccordion>
+                                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                    <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                  </AccordionSummary>
+
+                                  <AccordionDetails>
+                                    <Typography>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    </Typography>
+                                  </AccordionDetails>
+                              </StyledAccordion>
+
+                              <StyledAccordion>
+                                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                    <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                  </AccordionSummary>
+
+                                  <AccordionDetails>
+                                    <Typography>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    </Typography>
+                                  </AccordionDetails>
+                              </StyledAccordion>
+                      </Box>
+
+                      <Box sx={{width: '100%'}}>
+                            <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '40%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationComputer} />
+                            <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '65%', animation: 'animationBox2 8s linear 0s infinite'}}  src={IlustrationHtml} />
+                            <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '35%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationReact} />
+                      </Box>
+                    </Box>
+                </Grid>
+            </Box>
+
+            <Box component="section" mt={20}>
+              <Grid container spacing={2} sx={{alignItems: 'center'}}>
+              <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem, molestiae?</StyledTypographyLine>
+                  <Grid item xs={12} md={7}>
+                    <Box>
+                      <iframe style={{width: '100%', minHeight: '25rem', borderRadius: '16px'}}
+                       src="https://www.youtube.com/embed/rzwP43VNwy0"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay;
+                         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </Box>
                   </Grid>
 
-                  <Box mt={4} sx={{display: {xs: 'initial', md: 'flex'}, gap: '20px', width: '100%', alignItems: 'center'}}>
-                    <Box sx={{maxWidth: '700px'}}>
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
-
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
-
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
-
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
+                  <Grid item xs={12} md={5}>
+                  <Box sx={{gap: 1, height: '25rem', p: 1, overflow: 'auto', width: '100%', scrollSnapType: 'x mandatory',
+                        '& > *': {scrollSnapAlign: 'center',},'::-webkit-scrollbar': { display: 'none' },}}>
+                        {itemsDepoiment.map((item) => (
+                          <Paper elevation={4} sx={{minWidth: '300px', height: 'auto', my: 3, p: 4,
+                          borderRadius: '18px', textAlign: 'center'}}>
+                                <Avatar sx={{marginLeft: 'auto', marginRight: 'auto', marginBottom: '15px', width: '70px', height: '70px'}} alt="Remy Sharp" src={item.avatar} />
+                                <Typography component="h4" sx={{mb: 2}}>{item.name}</Typography>
+                                <Typography component="p" sx={{fontWeight: 400}}>{item.depoiment}</Typography>
+                          </Paper>
+                        ))}
                     </Box>
+                  </Grid>
+              </Grid>
+            </Box>
 
-                    <Box sx={{width: '100%'}}>
-                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '40%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationComputer} />
-                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '65%', animation: 'animationBox2 8s linear 0s infinite'}}  src={IlustrationHtml} />
-                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '35%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationReact} />
+            <Box component="section" mt={20}>
+              
+                <Grid container>
+                  <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem?</StyledTypographyLine>
+
+                    <Box sx={{width: '100%'}} mb={20}>
+                      <Carousel animation='slide' interval={5000} indicators={false} navButtonsAlwaysVisible={true}
+                      navButtonsProps={{style: {backgroundColor: '#F42829'}}}>
+                        {itemsCarousel.map((item) => (
+                          <StyledPaperBlog sx={{backgroundImage: `linear-gradient(180deg,rgba(31,31,31,0) 23.22%,#251f1f 92.31%), url(${item.src})`}}>
+                              <Box sx={{maxWidth: '670px'}}>
+                                  <Typography component="h2" sx={{fontSize: 'clamp(24px, 3vw, 34px)', color: '#FFFFFF'}} mt={5}>
+                                      {item.name}
+                                  </Typography>
+                                  <Typography component="p" sx={{fontSize: '20px', color: '#FFFFFF', fontWeight: 400,
+                                  whiteSpace: {xs: 'nowrap', md: 'initial'}, overflow: {xs: 'hidden', md: 'initial'},
+                                    textOverflow: {xs: 'ellipsis',md: 'initial'}, maxWidth: {xs: '70ch', md: '670px'} }} mt={2}>
+                                    {item.description}
+                                  </Typography>
+                                  <Button variant="contained" color="primary" sx={{px: 5, mt: {xs: 7, md: 3}, textAlign: 'center'}} size="medium" component="a" href={item.link}>
+                                      Lorem, ipsum dolor sit amet
+                                    </Button>
+                              </Box>
+                        </StyledPaperBlog>
+                        ))}
+                      </Carousel>
                     </Box>
-                  </Box>
-              </Grid>
-          </Box>
-
-          <Box component="section" mt={20}>
-              <Grid container>
-                <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem?</StyledTypographyLine>
-
-                  <Box sx={{width: '100%'}}>
-                    <Carousel animation='slide' interval={5000} indicators={false} navButtonsAlwaysVisible={true}
-                    navButtonsProps={{style: {backgroundColor: '#F42829'}}}>
-                      {itemsCarousel.map((item) => (
-                        <StyledPaperBlog sx={{backgroundImage: `linear-gradient(180deg,rgba(31,31,31,0) 23.22%,#251f1f 92.31%), url(${item.src})`}}>
-                            <Box sx={{maxWidth: '670px'}}>
-                                <Typography component="h2" sx={{fontSize: 'clamp(24px, 3vw, 34px)', color: '#FFFFFF'}} mt={5}>
-                                    {item.name}
-                                </Typography>
-                                <Typography component="p" sx={{fontSize: '20px', color: '#FFFFFF', fontWeight: 400,
-                                 whiteSpace: {xs: 'nowrap', md: 'initial'}, overflow: {xs: 'hidden', md: 'initial'},
-                                  textOverflow: {xs: 'ellipsis',md: 'initial'}, maxWidth: {xs: '70ch', md: '670px'} }} mt={2}>
-                                  {item.description}
-                                </Typography>
-                                <Button variant="contained" color="primary" sx={{px: 5, mt: {xs: 7, md: 3}, textAlign: 'center'}} size="medium" component="a" href={item.link}>
-                                    Lorem, ipsum dolor sit amet
-                                  </Button>
-                            </Box>
-                       </StyledPaperBlog>
-                      ))}
-                    </Carousel>
-                  </Box>
-              </Grid>
-          </Box>
-
-          <Box component="section" mt={20}>
-            aaaaaaaaaaaaaaaaaaa
-          </Box>
-      </Container>
+                </Grid>
+            </Box>
+        </Container>
+      <Footer />
     </>
   )
 }
