@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Container, Grid, Paper, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Button, Card, Container, Grid, Paper, Typography } from '@mui/material';
 import React from 'react'
 import Navbar from '../../components/Navbar/Index';
 import ProgramingHome from '../../_assets/img/programing-home.svg';
@@ -11,6 +11,7 @@ import ThemeGlobal from '../../_config/ThemeGlobal';
 import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Carousel from 'react-material-ui-carousel';
 
 
 const StyledTypograpyTitle = styled(Typography)(({ theme }) => ({
@@ -278,6 +279,48 @@ const StyledAccordion = styled(Accordion)(({ theme }) => ({
 }));
 
 
+const StyledPaperBlog = styled(Paper)(({ theme }) => ({
+    padding: '10px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '25rem',
+    backgroundColor: 'linear-gradient(90deg, rgba(10, 10, 10, .8) 0, rgba(10, 10, 10, 0) 50%)'
+}));
+
+
+
+var itemsCarousel = [
+  {
+      name: "Random Name #1",
+      description: "Probably the most random thing you have ever seen!",
+      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  },
+  {
+      name: "Random Name #2",
+      description: "Hello World!",
+      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  },
+  {
+    name: "Random Name #1",
+    description: "Probably the most random thing you have ever seen!",
+    src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  },
+  {
+      name: "Random Name #2",
+      description: "Hello World!",
+      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  },
+  {
+    name: "Random Name #1",
+    description: "Probably the most random thing you have ever seen!",
+    src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  },
+  {
+      name: "Random Name #2",
+      description: "Hello World!",
+      src: 'https://images.unsplash.com/photo-1532614338840-ab30cf10ed36',
+  }
+]
 
 const Welcome = () => {
   return (
@@ -361,6 +404,7 @@ const Welcome = () => {
               </Grid>
             </StyledBoxPrograming>
           </Box>
+
           <Box component="section" mt={{md: 20, xs: 50}}>
               <Grid container>
                   <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem, molestiae?</StyledTypographyLine>
@@ -448,6 +492,27 @@ const Welcome = () => {
                                 </AccordionDetails>
                             </StyledAccordion>
                     </Box>
+                  </Box>
+              </Grid>
+          </Box>
+
+          <Box component="section" mt={20}>
+              <Grid container>
+                <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem?</StyledTypographyLine>
+
+                  <Box sx={{width: '100%'}}>
+                    <Carousel animation='slide' interval={5000} indicators={false} navButtonsAlwaysVisible={true}
+                    navButtonsProps={{style: {backgroundColor: '#F42829'}}}>
+                      {itemsCarousel.map((item) => (
+                        <StyledPaperBlog sx={{backgroundImage: `url(${item.src})`}}>
+                            <h2>{item.name}</h2>
+                            <p>{item.description}</p>
+                            <Button className="CheckButton">
+                                Check it out!
+                            </Button>
+                       </StyledPaperBlog>
+                      ))}
+                    </Carousel>
                   </Box>
               </Grid>
           </Box>
