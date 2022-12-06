@@ -12,7 +12,12 @@ import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Carousel from 'react-material-ui-carousel';
-import BlogImage from '../../_assets/img/background-blog.jpg'
+import BlogImage from '../../_assets/img/background-blog.jpg';
+import IlustrationComputer from '../../_assets/img/ilustration-computer-accordion.svg';
+import IlustrationReact from '../../_assets/img/ilustration-react-accordion.svg';
+import IlustrationHtml from '../../_assets/img/ilustration-html-accordion.svg';
+
+
 
 
 const StyledTypograpyTitle = styled(Typography)(({ theme }) => ({
@@ -287,7 +292,93 @@ const StyledPaperBlog = styled(Paper)(({ theme }) => ({
     minHeight: '25rem',
 }));
 
+const StyledAccordionItemsAnimation = styled(Avatar)(({ theme }) => ({
+  position: 'relative',
+  padding: '15px',
+  borderRadius: '8px',
+  width: '115px',
+  height: '115px',
+  background: '#FFFFFF',
+  // animation: 'animationAvatar1 8s linear 0s infinite',
+  border: '1px solid #D9D9D9',
+  boxShadow: '0px 4px 40px rgb(9 9 12 / 10%)',
+  fontSize: '20px',
 
+  "@keyframes animationAvatar1": {
+    "0%": {
+      transform: "translateY(0)",
+    },
+    "10%": {
+      transform: "translateY(-8px)",
+    },
+    "30%": {
+      transform: "translateY(-8px)",
+    },
+    "50%": {
+      transform: "translateY(-8px)",
+    },
+    "70%": {
+      transform: "translateY(-8px)",
+    },
+    "20%": {
+      transform: "translateY(8px)",
+    },
+    "40%": {
+      transform: "translateY(8px)",
+    },
+    "60%": {
+      transform: "translateY(8px)",
+    },
+    "80%": {
+      transform: "translateY(6.4px)",
+    },
+    "90%": {
+      transform: "translateY(-6.4px)",
+    },
+    "100%": {
+      transform: "translateY(0)",
+    }
+  },
+  "@keyframes animationAvatar2": {
+    "0%": {
+      transform: "translateY(0)",
+    },
+    "10%": {
+      transform: "translateY(8px)",
+    },
+    "30%": {
+      transform: "translateY(8px)",
+    },
+    "50%": {
+      transform: "translateY(8px)",
+    },
+    "70%": {
+      transform: "translateY(8px)",
+    },
+
+
+    "20%": {
+      transform: "translateY(-8px)",
+    },
+    "40%": {
+      transform: "translateY(-8px)",
+    },
+    "60%": {
+      transform: "translateY(-8px)",
+    },
+
+
+    "80%": {
+      transform: "translateY(-6.4px)",
+    },
+    "90%": {
+      transform: "translateY(6.4px)",
+    },
+    "100%": {
+      transform: "translateY(0)",
+    }
+  },
+}));
 
 var itemsCarousel = [
   {
@@ -435,8 +526,38 @@ const Welcome = () => {
                     </Grid>
                   </Grid>
 
-                  <Box mt={{md: 15, xs: 6}}>
-                    <Box sx={{display: {md: 'flex'}, gap: '15px'}}>
+                  <Box mt={4} sx={{display: {xs: 'initial', md: 'flex'}, gap: '20px', width: '100%', alignItems: 'center'}}>
+                    <Box sx={{maxWidth: '700px'}}>
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+
+                            <StyledAccordion>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                  <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                  </Typography>
+                                </AccordionDetails>
+                            </StyledAccordion>
+
                             <StyledAccordion>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                                   <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
@@ -468,35 +589,10 @@ const Welcome = () => {
                             </StyledAccordion>
                     </Box>
 
-                    <Box sx={{display: {md: 'flex'}, gap: '15px'}}>
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
-                            <StyledAccordion>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                                  <Typography>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</Typography>
-                                </AccordionSummary>
-
-                                <AccordionDetails>
-                                  <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                  </Typography>
-                                </AccordionDetails>
-                            </StyledAccordion>
+                    <Box sx={{width: '100%'}}>
+                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '40%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationComputer} />
+                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '65%', animation: 'animationBox2 8s linear 0s infinite'}}  src={IlustrationHtml} />
+                          <StyledAccordionItemsAnimation sx={{my: 3, marginLeft: '35%', animation: 'animationBox1 8s linear 0s infinite'}} src={IlustrationReact} />
                     </Box>
                   </Box>
               </Grid>
