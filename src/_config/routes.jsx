@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../pages/Auth/Login/Index";
+import Register from "../pages/Auth/Register/Index";
 import NotFound from "../pages/NotFound/Index";
 import Welcome from "../pages/Welcome/Index";
 
@@ -18,7 +19,7 @@ export default function MyRoutes() {
   
             {/* <Route index element={<Home />} /> */}
             <Route exact path="Auth/Login" element={<Login />} /> 
-            {/* <Route exact path="Auth/Register" element={<Register />} /> */}
+            <Route exact path="Auth/Register" element={<Register />} />
             {/* <Route exact path="Auth/ForgotPassword" element={<ForgotPassword />} /> */}
   
             {/* <Route exact path="Courses" element={<Courses />} /> */}
