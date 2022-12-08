@@ -26,7 +26,7 @@ const ThemeGlobal = createTheme({
           fontWeight: 500,
         },
         button: {
-          fontStyle: 'italic',
+          border: 'none',
         },
     },
 });

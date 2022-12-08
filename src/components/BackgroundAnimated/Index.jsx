@@ -48,7 +48,7 @@ const StyledListItemCircle = styled(ListItem)(({ theme }) => ({
    
 }));
 
-const BackgroundAnimted = () => {
+const BackgroundAnimted = ({children}) => {
   return (
     <StyledBoxContent component="div">
             <StyledListCircle component="ul">
@@ -62,6 +62,7 @@ const BackgroundAnimted = () => {
                 <StyledListItemCircle sx={{left: '20%', width: "45px", height: '45px', animationDelay: '2s!important', animationDuration: '35s!important'}}></StyledListItemCircle>
                 <StyledListItemCircle sx={{left: '85%', width: "150px", height: '150px', animationDelay: '0s!important', animationDuration: '11s!important'}}></StyledListItemCircle>
             </StyledListCircle>
+            {children}
     </StyledBoxContent>
   )
 }

@@ -678,7 +678,7 @@ const Welcome = () => {
                                     textOverflow: {xs: 'ellipsis',md: 'initial'}, maxWidth: {xs: '70ch', md: '670px'} }} mt={2}>
                                     {item.description}
                                   </Typography>
-                                  <Button variant="contained" color="primary" sx={{px: 5, mt: {xs: 7, md: 3}, textAlign: 'center'}} size="medium" component="a" href={item.link}>
+                                    <Button variant="contained" color="primary" sx={{px: 5, mt: {xs: 7, md: 3}, textAlign: 'center'}} size="medium" component="a" href={item.link}>
                                       Lorem, ipsum dolor sit amet
                                     </Button>
                               </Box>
