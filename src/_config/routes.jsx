@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../pages/Auth/Login/Index";
 import Register from "../pages/Auth/Register/Index";
 import NotFound from "../pages/NotFound/Index";
+import StudentDashboard from "../pages/Student/Dashboard/Index";
 import Welcome from "../pages/Welcome/Index";
 
 
@@ -30,7 +31,7 @@ export default function MyRoutes() {
             {/* <Route exact path="Teacher/RegisteredStudents" element={<RegisteredStudents />} /> */}
   
             {/* <Route exact path="Student/MyCourses" element={<MyCourses />} /> */}
-            {/* <Route exact path="Student/Dashboard" element={<DashboardStudent />} /> */}
+            <Route exact path="Student/Dashboard" element={<StudentDashboard />} />
             {/* <Route exact path="Student/MessageTeacher" element={<MessageTeacher />} /> */}
   
   

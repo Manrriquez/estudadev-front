@@ -26,10 +26,10 @@ const NotFound = () => {
     <>
       <Container sx={{my: 5}} component="main" maxWidth="lg">
         <Box component="section" sx={{display: 'flex', justifyContent: 'center'}}>
-                <Box sx={{textAlign: 'center', maxWidth: '600px'}}>
-                    <img src={Error404} style={{width: '100%', marginTop: '2rem', marginBottom: '3rem'}}/> 
-                    <ButtonForm href="/" >Voltar para o inicio</ButtonForm>
-                </Box>      
+          <Box sx={{textAlign: 'center', maxWidth: '600px'}}>
+              <img src={Error404} style={{width: '100%', marginTop: '2rem', marginBottom: '3rem'}}/> 
+              <ButtonForm href="/" >Voltar para o inicio</ButtonForm>
+          </Box>      
         </Box>
       </Container>
     </>
