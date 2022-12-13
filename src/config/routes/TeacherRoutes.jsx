@@ -3,39 +3,36 @@ import { lazy } from 'react';
 import Loadable from '../../components/Loading/Loadable';
 import MainLayout from '../../components/Layout/Index';
 
-const DashboardDefault = Loadable(lazy(() => import('../../pages/Student/Dashboard/Index')));
-const Courses = Loadable(lazy(() => import('../../pages/Student/Courses/Index')));
-const MessageTeacher = Loadable(lazy(() => import('../../pages/Student/MessageTeacher/Index')));
-const NotFound = Loadable(lazy(() => import('../../pages/NotFound/Index')));
+const DashboardDefault = Loadable(lazy(() => import('../../pages/Teacher/Dashboard/Index')));
+const Courses = Loadable(lazy(() => import('../../pages/Teacher/Courses/Index')));
+const Message = Loadable(lazy(() => import('../../pages/Teacher/Message/Index')));
 
 
-const StudentRoutes = {
-    path: '/',
+const TeacherRoutes = {
+    path: '/Teacher',
     element: <MainLayout />,
     children: [
         {
-            path: '/',
+            path: 'Dashboard',
             element: <DashboardDefault />
         },
         {
-            path: 'student',
             children: [
                 {
-                    path: 'student-courses',
+                    path: 'Courses',
                     element: <Courses />
                 }
             ]
         },
         {
-            path: 'student',
             children: [
                 {
-                    path: 'student-message',
-                    element: <MessageTeacher />
+                    path: 'Message',
+                    element: <Message />
                 }
             ]
         },
     ]
 };
 
-export default StudentRoutes;
+export default TeacherRoutes;

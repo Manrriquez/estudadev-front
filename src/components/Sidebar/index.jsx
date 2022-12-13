@@ -1,27 +1,24 @@
 import PropTypes from 'prop-types';
-
-// material-ui
 import { useTheme } from '@mui/material/styles';
 import { Box, Drawer, useMediaQuery } from '@mui/material';
-
-// third-party
 import PerfectScrollbar from 'react-perfect-scrollbar'; //
 import { BrowserView, MobileView } from 'react-device-detect';
-
-// project imports
-// import MenuList from './MenuList';
 import MenuList from './MenuList/index'
-// import LogoSection from '../LogoSection';
-// import MenuCard from './MenuCard';
+import MenuListTeacher from './MenuList/index'
 import { drawerWidth } from '../../store/constant';
+import { useMatch } from "react-router-dom";
+  
 
-// import drawerWidth from '../../store/constant'
 
-// ==============================|| SIDEBAR DRAWER ||============================== //
+
+
 
 const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
     const theme = useTheme();
     const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+
+    const isRouteStudent = useMatch("/Student");
+    const isRouteTeacher = useMatch("/Teacher");
 
     const drawer = (
         <>
@@ -31,14 +28,8 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
                 </Box>
             </Box>
             <BrowserView>
-                <PerfectScrollbar
-                    component="div"
-                    style={{
-                        height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)',
-                        paddingLeft: '16px',
-                        paddingRight: '16px'
-                    }}
-                >
+                <PerfectScrollbar component="div" style={{ height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)',
+                    paddingLeft: '16px', paddingRight: '16px'}}>
                     <MenuList />
                     {/* <MenuCard /> */}
                 </PerfectScrollbar>
@@ -56,26 +47,10 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
     return (
         <Box component="nav" sx={{ flexShrink: { md: 0 }, width: matchUpMd ? drawerWidth : 'auto' }} aria-label="mailbox folders">
-            <Drawer
-                container={container}
-                variant={matchUpMd ? 'persistent' : 'temporary'}
-                anchor="left"
-                open={drawerOpen}
-                onClose={drawerToggle}
-                sx={{
-                    '& .MuiDrawer-paper': {
-                        width: drawerWidth,
-                        background: theme.palette.background.default,
-                        color: theme.palette.text.primary,
-                        borderRight: 'none',
-                        [theme.breakpoints.up('md')]: {
-                            top: '88px'
-                        }
-                    }
-                }}
-                ModalProps={{ keepMounted: true }}
-                color="inherit"
-            >
+            <Drawer container={container} variant={matchUpMd ? 'persistent' : 'temporary'} anchor="left"
+                open={drawerOpen} onClose={drawerToggle} sx={{ '& .MuiDrawer-paper': { width: drawerWidth, background: theme.palette.background.default,
+                    color: theme.palette.text.primary, borderRight: 'none', [theme.breakpoints.up('md')]: {top: '88px'}}}}
+                ModalProps={{ keepMounted: true }} color="inherit">
                 {drawer}
             </Drawer>
         </Box>

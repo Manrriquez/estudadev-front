@@ -3,17 +3,15 @@ import { forwardRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-// material-ui
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography, useMediaQuery } from '@mui/material';
-
-// project imports
 import { MENU_OPEN, SET_MENU } from '../../../../store/actions';
-
-// assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-// ==============================|| SIDEBAR MENU LIST ITEMS ||============================== //
+
+
+
+
 
 const NavItem = ({ item, level }) => {
     const theme = useTheme();
@@ -51,7 +49,6 @@ const NavItem = ({ item, level }) => {
         if (matchesSM) dispatch({ type: SET_MENU, opened: false });
     };
 
-    // active menu item on page load
     useEffect(() => {
         const currentIndex = document.location.pathname
             .toString()
@@ -60,7 +57,6 @@ const NavItem = ({ item, level }) => {
         if (currentIndex > -1) {
             dispatch({ type: MENU_OPEN, id: item.id });
         }
-        // eslint-disable-next-line
     }, []);
 
     return (

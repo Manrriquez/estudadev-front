@@ -11,24 +11,24 @@ const icons = {
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
-const student = {
-    id: 'Student',
-    title: 'Estudante',
+const teacher = {
+    id: 'Teacher',
+    title: 'Professor',
     type: 'group',
     children: [
         {
-            id: 'student-courses',
+            id: 'teacher-courses',
             title: 'Courses',
             type: 'item',
-            url: '/Student/Courses',
+            url: '/Teacher/Courses',
             icon: icons.IconTypography,
             breadcrumbs: false
         },
         {
-            id: 'student-message',
+            id: 'teacher-message',
             title: 'Mensagem Professor',
             type: 'item',
-            url: '/Student/Message',
+            url: '/Teacher/Message',
             icon: icons.IconPalette,
             breadcrumbs: false
         },
@@ -36,4 +36,4 @@ const student = {
     ]
 };
 
-export default student;
+export default teacher;

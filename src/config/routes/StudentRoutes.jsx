@@ -6,31 +6,28 @@ import MainLayout from '../../components/Layout/Index';
 const DashboardDefault = Loadable(lazy(() => import('../../pages/Student/Dashboard/Index')));
 const Courses = Loadable(lazy(() => import('../../pages/Student/Courses/Index')));
 const MessageTeacher = Loadable(lazy(() => import('../../pages/Student/MessageTeacher/Index')));
-const NotFound = Loadable(lazy(() => import('../../pages/NotFound/Index')));
 
 
 const StudentRoutes = {
-    path: '/',
+    path: '/Student',
     element: <MainLayout />,
     children: [
         {
-            path: '/',
+            path: 'Dashboard',
             element: <DashboardDefault />
         },
         {
-            path: 'student',
             children: [
                 {
-                    path: 'student-courses',
+                    path: 'Courses',
                     element: <Courses />
                 }
             ]
         },
         {
-            path: 'student',
             children: [
                 {
-                    path: 'student-message',
+                    path: 'Message',
                     element: <MessageTeacher />
                 }
             ]
