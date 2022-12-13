@@ -7,7 +7,7 @@ import MainCard from '../../../components/ui-component/cards/MainCard'
 
 const StudenDashboard = () => {
   return (
-    <MainCard title="Dashboard">studentDashboard</MainCard>
+    <MainCard>studentDashboard</MainCard>
   )
 }
 

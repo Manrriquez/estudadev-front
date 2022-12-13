@@ -4,7 +4,7 @@ import MainCard from '../../../components/ui-component/cards/MainCard';
 
 const MessageTeacher = () => {
   return (
-    <MainCard title="Menssagem Professor">MessageTeacher</MainCard>
+    <MainCard>MessageTeacher</MainCard>
   )
 }
 
