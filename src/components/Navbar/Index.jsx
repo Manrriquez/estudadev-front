@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { styled, ThemeProvider } from '@mui/material/styles';
-import ThemeGlobal from '../../_config/ThemeGlobal';
+// import ThemeGlobal from '../../_config/ThemeGlobal';
 import Logotype from '../../_assets/img/LOGOTYPE.svg'
 
 

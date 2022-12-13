@@ -2,7 +2,6 @@
 import './App.css'
 import { useSelector } from 'react-redux';
 import MyRoutes from './_config/routes/index'
-import ThemeGlobal from './_config/ThemeGlobal'
 import themes from '../src/themes'
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
 import NavigationScroll from './_config/routes/NavigationScroll';

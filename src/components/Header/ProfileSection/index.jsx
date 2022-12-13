@@ -89,20 +89,19 @@ const ProfileSection = () => {
 
     return (
         <>
-            <Chip
-                sx={{
+            <Chip sx={{
                     height: '48px',
                     alignItems: 'center',
                     borderRadius: '27px',
                     transition: 'all .2s ease-in-out',
-                    borderColor: theme.palette.primary.light,
-                    backgroundColor: theme.palette.primary.light,
+                    borderColor: theme.palette.secondary.light,
+                    backgroundColor: theme.palette.secondary.light,
                     '&[aria-controls="menu-list-grow"], &:hover': {
-                        borderColor: theme.palette.primary.main,
-                        background: `${theme.palette.primary.main}!important`,
-                        color: theme.palette.primary.light,
+                        borderColor: theme.palette.secondary.main,
+                        background: `${theme.palette.secondary.main}!important`,
+                        color: theme.palette.secondary.light,
                         '& svg': {
-                            stroke: theme.palette.primary.light
+                            stroke: theme.palette.secondary.light
                         }
                     },
                     '& .MuiChip-label': {
@@ -123,7 +122,7 @@ const ProfileSection = () => {
                         color="inherit"
                     />
                 }
-                label={<IconSettings stroke={1.5} size="1.5rem" color={theme.palette.primary.main} />}
+                label={<IconSettings stroke={1.5} size="1.5rem" color={theme.palette.secondary.main} />}
                 variant="outlined"
                 ref={anchorRef}
                 aria-controls={open ? 'menu-list-grow' : undefined}

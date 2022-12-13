@@ -7,7 +7,7 @@ import JavaIcon from '../../_assets/img/java.svg';
 import AwsIcon from '../../_assets/img/aws.svg';
 import DockerIcon from '../../_assets/img/docker.svg';
 import ReactIcon from '../../_assets/img/reactjs.svg';
-import ThemeGlobal from '../../_config/ThemeGlobal';
+// import ThemeGlobal from '../../_config/ThemeGlobal';
 import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
