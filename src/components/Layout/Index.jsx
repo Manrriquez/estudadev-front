@@ -1,142 +1,116 @@
-import * as React from 'react';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiDrawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems, secondaryListItems } from './listItems.jsx';
-import ThemeGlobal from '../../_config/ThemeGlobal.jsx';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Outlet } from 'react-router-dom';
 
+// material-ui
+import { styled, useTheme } from '@mui/material/styles';
+import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
 
+// project imports
+import Breadcrumbs from '../../components/ui-component/extended/Breadcrumbs';
+import Header from '../Header/index';
+import Sidebar from '../Sidebar/index';
+// import Customization from './Customization/index';
+import navigation from '../menu-items/index';
+import { drawerWidth } from '../../store/constant';
+import { SET_MENU } from '../../store/actions';
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+// assets
+import { IconChevronRight } from '@tabler/icons';
 
-const drawerWidth = 240;
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
+// styles
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
+    ...theme.typography.mainContent,
+    ...(!open && {
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen
+        }),
+        [theme.breakpoints.up('md')]: {
+            marginLeft: -(drawerWidth - 20),
+            width: `calc(100% - ${drawerWidth}px)`
+        },
+        [theme.breakpoints.down('md')]: {
+            marginLeft: '20px',
+            width: `calc(100% - ${drawerWidth}px)`,
+            padding: '16px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '10px',
+            width: `calc(100% - ${drawerWidth}px)`,
+            padding: '16px',
+            marginRight: '10px'
+        }
     }),
-  }),
+    ...(open && {
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen
+        }),
+        marginLeft: 0,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+        width: `calc(100% - ${drawerWidth}px)`,
+        [theme.breakpoints.down('md')]: {
+            marginLeft: '20px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '10px'
+        }
+    })
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      width: drawerWidth,
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      boxSizing: 'border-box',
-      ...(!open && {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-          width: theme.spacing(9),
-        },
-      }),
-    },
-  }),
-);
+// ==============================|| MAIN LAYOUT ||============================== //
 
-const mdTheme = createTheme();
+const MainLayout = () => {
+    const theme = useTheme();
+    const matchDownMd = useMediaQuery(theme.breakpoints.down('lg'));
 
-const LayoutDashboard = ({children}) => {
-  const [open, setOpen] = React.useState(true);
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
+    // Handle left drawer
+    const leftDrawerOpened = useSelector((state) => state.customization.opened);
+    const dispatch = useDispatch();
+    const handleLeftDrawerToggle = () => {
+        dispatch({ type: SET_MENU, opened: !leftDrawerOpened });
+    };
 
-  return (
-    <ThemeProvider theme={ThemeGlobal}>
-      <Box sx={{ display: 'flex' }}>
+    useEffect(() => {
+        dispatch({ type: SET_MENU, opened: !matchDownMd });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [matchDownMd]);
 
-        <AppBar position="absolute" open={open}>
-          <Toolbar sx={{pr: '24px', }}>
-            <IconButton edge="start" color="inherit" aria-label="open drawer"
-              onClick={toggleDrawer} sx={{ marginRight: '36px', ...(open && { display: 'none' }),}}>
-              <MenuIcon />
-            </IconButton>
-            <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-              Dashboard
-            </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
+    return (
+        <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
+            {/* header */}
+            <AppBar
+                enableColorOnDark
+                position="fixed"
+                color="inherit"
+                elevation={0}
+                sx={{
+                    bgcolor: theme.palette.background.default,
+                    transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
+                }}
+            >
+                <Toolbar>
+                    <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
+                </Toolbar>
+            </AppBar>
 
-        <Drawer variant="permanent" open={open}>
-          <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', px: [1],}}>
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav">
-            {mainListItems}
-            <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
-          </List>
-        </Drawer>
+            {/* drawer */}
+            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
 
-        <Box component="main" sx={{ backgroundColor: (theme) => theme.palette.mode === 'light' ? theme.palette.grey[100]
-            : theme.palette.grey[900], flexGrow: 1, height: '100vh', overflow: 'auto',}}>
-          <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              {children}
-            </Grid>
-            <Copyright sx={{ pt: 4 }} />
-          </Container>
+            {/* main content */}
+            <Main theme={theme} open={leftDrawerOpened}>
+                {/* breadcrumb */}
+                <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
+                <Outlet />
+            </Main>
+            {/* <Customization /> */}
         </Box>
-      </Box>
-    </ThemeProvider>
-  );
-}
+    );
+};
 
-export default LayoutDashboard;
+export default MainLayout;

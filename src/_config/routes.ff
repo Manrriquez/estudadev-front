@@ -6,7 +6,6 @@ import StudentDashboard from "../pages/Student/Dashboard/Index";
 import Welcome from "../pages/Welcome/Index";
 
 
-
 export default function MyRoutes() {
     return (
       <BrowserRouter>
