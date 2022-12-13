@@ -17,11 +17,10 @@ import {
     Typography
 } from '@mui/material';
 
-// assets
 import { IconBrandTelegram, IconBuildingStore, IconMailbox, IconPhoto } from '@tabler/icons';
 // import User1 from 'assets/images/users/user-round.svg';
+import User1 from '../../../_assets/img/user-round.svg';
 
-// styles
 const ListItemWrapper = styled('div')(({ theme }) => ({
     cursor: 'pointer',
     padding: 16,
@@ -33,7 +32,6 @@ const ListItemWrapper = styled('div')(({ theme }) => ({
     }
 }));
 
-// ==============================|| NOTIFICATION LIST ITEM ||============================== //
 
 const NotificationList = () => {
     const theme = useTheme();
@@ -63,31 +61,12 @@ const NotificationList = () => {
     };
 
     return (
-        <List
-            sx={{
-                width: '100%',
-                maxWidth: 330,
-                py: 0,
-                borderRadius: '10px',
-                [theme.breakpoints.down('md')]: {
-                    maxWidth: 300
-                },
-                '& .MuiListItemSecondaryAction-root': {
-                    top: 22
-                },
-                '& .MuiDivider-root': {
-                    my: 0
-                },
-                '& .list-container': {
-                    pl: 7
-                }
-            }}
-        >
+        <List sx={{ width: '100%', maxWidth: 330, py: 0, borderRadius: '10px', [theme.breakpoints.down('md')]: { maxWidth: 300
+        },'& .MuiListItemSecondaryAction-root': { top: 22 }, '& .MuiDivider-root': { my: 0 },'& .list-container': { pl: 7}}}>
             <ListItemWrapper>
                 <ListItem alignItems="center">
                     <ListItemAvatar>
-                        {/* <Avatar alt="John Doe" src={User1} /> */}
-                        aaaa
+                        <Avatar alt="John Doe" src={User1} />
                     </ListItemAvatar>
                     <ListItemText primary="John Doe" />
                     <ListItemSecondaryAction>
@@ -120,14 +99,8 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center">
                     <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: theme.palette.success.dark,
-                                backgroundColor: theme.palette.success.light,
-                                border: 'none',
-                                borderColor: theme.palette.success.main
-                            }}
-                        >
+                        <Avatar sx={{ color: theme.palette.success.dark, backgroundColor: theme.palette.success.light,
+                        border: 'none', borderColor: theme.palette.success.main }}>
                             <IconBuildingStore stroke={1.5} size="1.3rem" />
                         </Avatar>
                     </ListItemAvatar>
@@ -159,14 +132,8 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center">
                     <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: theme.palette.primary.dark,
-                                backgroundColor: theme.palette.primary.light,
-                                border: 'none',
-                                borderColor: theme.palette.primary.main
-                            }}
-                        >
+                        <Avatar sx={{ color: theme.palette.primary.dark, backgroundColor: theme.palette.primary.light, border: 'none',
+                        borderColor: theme.palette.primary.main }}>
                             <IconMailbox stroke={1.5} size="1.3rem" />
                         </Avatar>
                     </ListItemAvatar>
@@ -225,11 +192,7 @@ const NotificationList = () => {
                     <Grid item xs={12}>
                         <Grid container>
                             <Grid item xs={12}>
-                                <Card
-                                    sx={{
-                                        backgroundColor: theme.palette.secondary.light
-                                    }}
-                                >
+                                <Card sx={{ backgroundColor: theme.palette.secondary.light }}>
                                     <CardContent>
                                         <Grid container direction="column">
                                             <Grid item xs={12}>

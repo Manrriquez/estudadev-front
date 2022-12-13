@@ -1,11 +1,7 @@
-// material-ui
 import { styled } from '@mui/material/styles';
 import { Button, Card, CardContent, Grid, Stack, Typography } from '@mui/material';
-
-// project imports
 import AnimateButton from '../../ui-component/extended/AnimateButton';
 
-// styles
 const CardStyle = styled(Card)(({ theme }) => ({
     background: theme.palette.warning.light,
     marginTop: '16px',
@@ -36,7 +32,6 @@ const CardStyle = styled(Card)(({ theme }) => ({
     }
 }));
 
-// ==============================|| PROFILE MENU - UPGRADE PLAN CARD ||============================== //
 
 const UpgradePlanCard = () => (
     <CardStyle>
