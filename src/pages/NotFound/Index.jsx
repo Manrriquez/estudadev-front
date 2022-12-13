@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import Error404 from '../../_assets/img/404.svg';
+import Error404 from '../../assets/img/404.svg';
 
 const ButtonForm = styled.a`
     background: #F42829;

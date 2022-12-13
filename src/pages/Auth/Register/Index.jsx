@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Box, Container, FormControl, Grid, Input, Typography} from '@mui/material';
 import React from 'react'
 import BackgroundAnimted from '../../../components/BackgroundAnimated/Index';
-import Logotype from '../../../_assets/img/LOGOTYPE.svg'
+import Logotype from '../../../assets/img/LOGOTYPE.svg'
 
 
 
@@ -66,7 +66,6 @@ const Register = () => {
 
 
   return (
-    <BackgroundAnimted>
        <Container component="main" sx={{zIndex: 2}}>
           <Grid container component="section">
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100%'}}>
@@ -101,7 +100,6 @@ const Register = () => {
             </Box>
           </Grid>
        </Container>
-    </BackgroundAnimted>
   )
 }
 

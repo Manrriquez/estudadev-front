@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Box, ButtonBase } from '@mui/material';
-import LogoSection from '../../_assets/img/LOGOTYPE.svg';
+import LogoSection from '../../assets/img/LOGOTYPE.svg';
 import SearchSection from './SearchSection/index';
 import ProfileSection from './ProfileSection/index';
 // import NotificationSection from './NotificationSection/index';

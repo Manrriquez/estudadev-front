@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Box, List, ListItem } from '@mui/material'
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 
 
 const StyledBoxContent = styled(Box)(({ theme }) => ({
@@ -62,7 +63,7 @@ const BackgroundAnimted = ({children}) => {
                 <StyledListItemCircle sx={{left: '20%', width: "45px", height: '45px', animationDelay: '2s!important', animationDuration: '35s!important'}}></StyledListItemCircle>
                 <StyledListItemCircle sx={{left: '85%', width: "150px", height: '150px', animationDelay: '0s!important', animationDuration: '11s!important'}}></StyledListItemCircle>
             </StyledListCircle>
-            {children}
+            <Outlet />
     </StyledBoxContent>
   )
 }
