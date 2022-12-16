@@ -9,8 +9,8 @@ import Breadcrumbs from '../../components/ui-component/extended/Breadcrumbs';
 import Header from '../Header/index';
 import Sidebar from '../Sidebar/index';
 import navigation from '../menu-items/index';
-import { drawerWidth } from '../../store/constant';
-import { SET_MENU } from '../../store/actions';
+import { drawerWidth } from '../../utils/constant';
+import { SET_MENU } from '../../utils/actions';
 
 import { IconChevronRight } from '@tabler/icons';
 

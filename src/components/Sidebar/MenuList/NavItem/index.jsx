@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography, useMediaQuery } from '@mui/material';
-import { MENU_OPEN, SET_MENU } from '../../../../store/actions';
+import { MENU_OPEN, SET_MENU } from '../../../../utils/actions';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 

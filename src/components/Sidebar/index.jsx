@@ -5,7 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'; //
 import { BrowserView, MobileView } from 'react-device-detect';
 import MenuList from './MenuList/index'
 import MenuListTeacher from './MenuList/index'
-import { drawerWidth } from '../../store/constant';
+import { drawerWidth } from '../../utils/constant';
 import { useMatch } from "react-router-dom";
   
 
