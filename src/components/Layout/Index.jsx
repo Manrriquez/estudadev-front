@@ -78,7 +78,7 @@ const MainLayout = () => {
 
             <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
             
-            <Main theme={theme} open={leftDrawerOpened} sx={{bgcolor: '#FAFAFA'}}>
+            <Main open={leftDrawerOpened} sx={{bgcolor: '#FAFAFA'}}>
                 <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
                 <Outlet />
             </Main>

@@ -1,21 +1,29 @@
-// assets
-import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons';
+import { IconTypography, IconPalette, IconShadow, IconWindmill, IconDashboard } from '@tabler/icons';
 
-// constant
+
 const icons = {
     IconTypography,
     IconPalette,
     IconShadow,
-    IconWindmill
+    IconWindmill,
+    IconDashboard
 };
 
-// ==============================|| UTILITIES MENU ITEMS ||============================== //
+
 
 const student = {
     id: 'Student',
     title: 'Estudante',
     type: 'group',
     children: [
+        {
+            id: 'student-dashboard',
+            title: 'Dashboard',
+            type: 'item',
+            url: '/Student/Dashboard',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
+        },
         {
             id: 'student-courses',
             title: 'Courses',

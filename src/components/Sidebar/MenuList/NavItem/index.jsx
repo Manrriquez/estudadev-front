@@ -12,7 +12,6 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 
 
-
 const NavItem = ({ item, level }) => {
     const theme = useTheme();
     const dispatch = useDispatch();
@@ -63,9 +62,7 @@ const NavItem = ({ item, level }) => {
         <ListItemButton
             {...listItemProps}
             disabled={item.disabled}
-            sx={{
-                borderRadius: `${customization.borderRadius}px`,
-                mb: 0.5,
+            sx={{ borderRadius: '12px', mb: 0.5,
                 alignItems: 'flex-start',
                 backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
                 py: level > 1 ? 1 : 1.25,

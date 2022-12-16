@@ -8,7 +8,7 @@ import student from './student';
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
-    items: [dashboard, student ]
+    items: [student ]
 };
 
 

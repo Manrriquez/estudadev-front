@@ -30,24 +30,15 @@ const MainCard = forwardRef(
         const theme = useTheme();
 
         return (
-            <Card ref={ref} {...others}
-                sx={{
-                    // border: border ? '1px solid' : 'none',
-                    // borderColor: theme.palette.secondary[800] + 75,
-                    boxShadow: '0px 2px 65px 2px rgba(0, 0, 0, 0.05)',
-                    ...sx
-                }}
-            >
-                {/* card header and action */}
+                <Card ref={ref} {...others} sx={{borderRadius: '12px', boxShadow: '0px 2px 65px 2px rgba(0, 0, 0, 0.05)', ...sx}}>
+             
                 {!darkTitle && title && <CardHeader sx={headerSX} title={title} action={secondary} />}
+
                 {darkTitle && title && (
                     <CardHeader sx={headerSX} title={<Typography variant="h3">{title}</Typography>} action={secondary} />
                 )}
-
-                {/* content & header divider */}
+                
                 {title && <Divider />}
-
-                {/* card content */}
                 {content && (
                     <CardContent sx={contentSX} className={contentClass}>
                         {children}

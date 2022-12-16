@@ -3,7 +3,6 @@ import MyRoutes from './routes/index'
 import themes from './config/themes'
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
 import NavigationScroll from './config/NavigationScroll';
-// import NavigationScroll from './config/routes/NavigationScroll';
 
 
 function App() {

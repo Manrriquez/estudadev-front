@@ -19,13 +19,11 @@ const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
 }));
 
 const OutlineInputStyle = styled(OutlinedInput, { shouldForwardProp })(({ theme }) => ({
-    width: 434,
-    marginLeft: 16,
+    width: '100%',
     paddingLeft: 16,
     paddingRight: 16,
     '& input': {
         background: 'transparent !important',
-        paddingLeft: '4px !important'
     },
     [theme.breakpoints.down('lg')]: {
         width: 250
@@ -53,7 +51,7 @@ const MobileSearch = ({ value, setValue, popupState }) => {
     const theme = useTheme();
 
     return (
-        <OutlineInputStyle
+        <OutlineInputStyle mt={2}
             id="input-search-header"
             value={value}
             onChange={(e) => setValue(e.target.value)}
@@ -65,11 +63,6 @@ const MobileSearch = ({ value, setValue, popupState }) => {
             }
             endAdornment={
                 <InputAdornment position="end">
-                    <ButtonBase sx={{ borderRadius: '12px' }}>
-                        <HeaderAvatarStyle variant="rounded">
-                            <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                        </HeaderAvatarStyle>
-                    </ButtonBase>
                     <Box sx={{ ml: 2 }}>
                         <ButtonBase sx={{ borderRadius: '12px' }}>
                             <Avatar
@@ -115,7 +108,7 @@ const SearchSection = () => {
                 <PopupState variant="popper" popupId="demo-popup-popper">
                     {(popupState) => (
                         <>
-                            <Box sx={{ ml: 2 }}>
+                            <Box sx={{ ml: 1, mt: 1 }}>
                                 <ButtonBase sx={{ borderRadius: '12px' }}>
                                     <HeaderAvatarStyle variant="rounded" {...bindToggle(popupState)}>
                                         <IconSearch stroke={1.5} size="1.2rem" />
@@ -151,7 +144,8 @@ const SearchSection = () => {
                     )}
                 </PopupState>
             </Box>
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            
+            <Box sx={{ display: { xs: 'none', md: 'block' } }} mt={3}>
                 <OutlineInputStyle
                     id="input-search-header"
                     value={value}
@@ -160,15 +154,6 @@ const SearchSection = () => {
                     startAdornment={
                         <InputAdornment position="start">
                             <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-                        </InputAdornment>
-                    }
-                    endAdornment={
-                        <InputAdornment position="end">
-                            <ButtonBase sx={{ borderRadius: '12px' }}>
-                                <HeaderAvatarStyle variant="rounded">
-                                    <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                                </HeaderAvatarStyle>
-                            </ButtonBase>
                         </InputAdornment>
                     }
                     aria-describedby="search-helper-text"
