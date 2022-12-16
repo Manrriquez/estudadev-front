@@ -1,10 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-
-// assets
-// import colors from '_assets/scss/_themes-vars.module.scss';
-import colors from '../assets/scss/_themes-vars.module.scss';
-
-// project imports
+import colors from '../../assets/scss/_themes-vars.module.scss';
 import componentStyleOverrides from './compStyleOverride';
 import themePalette from './palette';
 import themeTypography from './typography';

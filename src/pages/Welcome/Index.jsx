@@ -1,22 +1,21 @@
 import styled from '@emotion/styled';
-import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Button, Card, Container, Grid, Paper, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Button, Container, Grid, Paper, Typography } from '@mui/material';
 import React from 'react'
 import Navbar from '../../components/Navbar/Index';
-import ProgramingHome from '../../_assets/img/programing-home.svg';
-import JavaIcon from '../../_assets/img/java.svg';
-import AwsIcon from '../../_assets/img/aws.svg';
-import DockerIcon from '../../_assets/img/docker.svg';
-import ReactIcon from '../../_assets/img/reactjs.svg';
-// import ThemeGlobal from '../../_config/ThemeGlobal';
-import BackgroundGeometric from '../../_assets/img/background-geometric.svg'
+import ProgramingHome from '../../assets/img/programing-home.svg';
+import JavaIcon from '../../assets/img/java.svg';
+import AwsIcon from '../../assets/img/aws.svg';
+import DockerIcon from '../../assets/img/docker.svg';
+import ReactIcon from '../../assets/img/reactjs.svg';
+import BackgroundGeometric from '../../assets/img/background-geometric.svg'
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Carousel from 'react-material-ui-carousel';
-import BlogImage from '../../_assets/img/background-blog.jpg';
-import IlustrationComputer from '../../_assets/img/ilustration-computer-accordion.svg';
-import IlustrationReact from '../../_assets/img/ilustration-react-accordion.svg';
-import IlustrationHtml from '../../_assets/img/ilustration-html-accordion.svg';
-import AvatarImage from '../../_assets/img/avatar.jpg';
+import BlogImage from '../../assets/img/background-blog.jpg';
+import IlustrationComputer from '../../assets/img/ilustration-computer-accordion.svg';
+import IlustrationReact from '../../assets/img/ilustration-react-accordion.svg';
+import IlustrationHtml from '../../assets/img/ilustration-html-accordion.svg';
+import AvatarImage from '../../assets/img/avatar.jpg';
 import Footer from '../../components/Footer/Index';
 
 

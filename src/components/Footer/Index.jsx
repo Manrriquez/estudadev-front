@@ -4,7 +4,7 @@ import React from 'react'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-import Logotype from '../../_assets/img/LOGOTYPE.svg'
+import Logotype from '../../assets/img/LOGOTYPE.svg'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';

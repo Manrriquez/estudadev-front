@@ -1,10 +1,9 @@
-// import { CssBaseline, ThemeProvider } from '@mui/material'
-import './App.css'
 import { useSelector } from 'react-redux';
-import MyRoutes from './config/routes/index'
-import themes from '../src/themes'
+import MyRoutes from './routes/index'
+import themes from './config/themes'
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
-import NavigationScroll from './config/routes/NavigationScroll';
+import NavigationScroll from './config/NavigationScroll';
+// import NavigationScroll from './config/routes/NavigationScroll';
 
 
 function App() {

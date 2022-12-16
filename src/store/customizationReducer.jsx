@@ -1,5 +1,5 @@
 import config from '../config';
-import * as actionTypes from './actions';
+import * as actionTypes from '../utils/actions';
 
 
 export const initialState = {
