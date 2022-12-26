@@ -5,50 +5,90 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Card, CardActionArea, CardContent, CardMedia, Grid, Link } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, FormControl, Grid, InputLabel, LinearProgress, Link, MenuItem, Rating, Select, TextField } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import backgroundCurso from '../../../assets/img/curso-background.jpg';
+import styled from '@emotion/styled';
 
 
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+var dataCourses = [
+  {
+    image: backgroundCurso,
+    nameCourse: "Java Web Full Stack",
+    author: "Fulano Correia",
+    progress: 60,
+    stars: 4,
+  },
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
+  {
+    image: backgroundCurso,
+    nameCourse: "Java Web Full Stack",
+    author: "Fulano Correia",
+    progress: 60,
+    stars: 4,
+  },
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
+  {
+    image: backgroundCurso,
+    nameCourse: "Java Web Full Stack",
+    author: "Fulano Correia",
+    progress: 60,
+    stars: 4,
+  },
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
+  {
+    image: backgroundCurso,
+    nameCourse: "Java Web Full Stack",
+    author: "Fulano Correia",
+    progress: 60,
+    stars: 4,
+  },
 
+  {
+    image: backgroundCurso,
+    nameCourse: "Java Web Full Stack",
+    author: "Fulano Correia",
+    progress: 60,
+    stars: 4,
+  },
+
+]
+
+
+const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
+  minHeight: '170px',
+  p: 3,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  
+  '& .MuiIconButton-root': {
+    p: 2,
+
+    '&:hover': {
+      backgroundColor: '#FFFFFF'
+    }
+  },
+
+  '&:hover': {
+  }
+
+}));
 
 
 const Courses = () => {
+  const [age, setAge] = React.useState('');
+
+  const handleChangeSelect = (event) => {
+    setAge(event.target.value);
+  };
+
+  const [stars, setStars] = React.useState(2);
+
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,79 +98,59 @@ const Courses = () => {
 
   return (
     <Grid container spacing={1} component="section">
+
       <Grid item md={12}>
-        <MainCard>
-          <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 0, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange}  centered textColor="secondary"
-  indicatorColor="secondary">
-                  <Tab icon={<PhoneIcon />}  label="MEUS CURSOS" {...a11yProps(0)} />
-                  <Tab icon={<PhoneIcon />} label="LISTA DE DESEJOS" {...a11yProps(1)} />
-                  <Tab icon={<PhoneIcon />} label="MINHAS LISTAS" {...a11yProps(2)} />
-                  <Tab icon={<PhoneIcon />} label="NOTICIAS" {...a11yProps(3)} />
-                </Tabs>
-                
-            </Box>
+        <Typography sx={{mb: 2, fontWeight: 600}}>FILTRO:</Typography>
+        <Box sx={{width: '100%', mb: 8, display: 'flex', gap: '20px', justifyContent: 'space-between', alignItems: 'center'}}>
+
+          <Box sx={{width: '100%', display: 'flex', gap: '10px'}}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label" color="secondary">Categorias</InputLabel>
+              <Select labelId="demo-simple-select-label" id="demo-simple-select" color="secondary" value={age} label="Categorias" onChange={handleChangeSelect}>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label"  color="secondary">Acessados recentemente</InputLabel>
+              <Select labelId="demo-simple-select-label" id="demo-simple-select" color="secondary" value={age} label="Acessados recentemente" onChange={handleChangeSelect}>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
           </Box>
-        </MainCard>
-      </Grid>
 
-      <Grid item md={12}>
-            <Box sx={{ width: '100%' }}>
-                <TabPanel value={value} index={0}>
-                  <Box sx={{display: 'flex', justifyContent: 'space-around', gap: '10px'}}>
-                      <Box>
-                          <Card sx={{ maxWidth: 345 }} color="primary">
-                              <Link color="primary" component="a" href="#" sx={{textDecoration: 'none'}}>
-
-                                <CardMedia component="div"  
-                                  sx={{backgroundImage: 'url(https://mui.com/static/images/cards/contemplative-reptile.jpg)',
-                                  minHeight: '170px', p: 3, display: 'flex', justifyContent: 'center', alignItems: 'center',
-                                  '& .MuiIconButton-root': {
-                                      p: 2,
-                                    '&:hover': {
-                                      backgroundColor: 'orange!important',
-                                      display: 'block!important'
-                                    }
-                                  }, '&:hover': {display: 'block!important'} }}>
-                                   
-                                    <IconButton  size="large" 
-                                    sx={{backgroundColor: 'secondary.light', '&:hover': {backgroundColor: 'secondary.light'}, display: 'none' }}>
-                                      <PlayArrowIcon color='primary' fontSize="inherit" sx={{color: 'secondary.dark'}} />
-                                    </IconButton>
-                                 </CardMedia>
-
-                                <CardContent>
-                                  <Typography gutterBottom variant="h5" component="div">
-                                    Lizard
-                                  </Typography>
-                                  <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                  </Typography>
-                                </CardContent>
-
-                              </Link>
-                          </Card>
-                      </Box>
-                  </Box>
-                </TabPanel>
-
-
-                <TabPanel value={value} index={1}>
-                  Item Two
-                </TabPanel>
-
-
-                <TabPanel value={value} index={2}>
-                  Item Three
-                </TabPanel>
-
-
-                 <TabPanel value={value} index={3}>
-                  Item Three 3333
-                </TabPanel>
-            </Box>
+          <TextField sx={{backgroundColor: '#FFFFFF'}}  color="secondary" fullWidth label="Pesquisar curso.." id="fullWidth" />
+        </Box>
+        <Grid container spacing={2}>
+          {dataCourses.map((item) => (
+            <Grid item xs={12} md={3}>
+              <Card sx={{ maxWidth: 345 }} color="primary" elevation={1}>
+                <Link color="primary" component="a" href="#" sx={{textDecoration: 'none'}}>
+      
+                  <StyledCardMedia component="div" sx={{backgroundImage: `url(${item.image})`}}>
+                    <IconButton  size="large"  sx={{backgroundColor: 'secondary.light'}}>
+                      <PlayArrowIcon color='primary' fontSize="inherit" sx={{color: 'secondary.dark'}} />
+                    </IconButton>
+                  </StyledCardMedia>
+      
+                  <CardContent sx={{p: 2}}>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {item.nameCourse}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {item.author}
+                    </Typography>
+                    <LinearProgress sx={{mt: 2}} variant="determinate" value={item.progress}  color="secondary" />
+                    <Rating  defaultValue={0} precision={item.stars} size="small" sx={{mt: 1}} name="simple-controlled" value={stars} onChange={(event, newValue) => { setValue(newValue); }}/>
+                  </CardContent>
+                </Link>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Grid>
   )
