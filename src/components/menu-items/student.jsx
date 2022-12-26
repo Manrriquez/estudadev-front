@@ -26,7 +26,7 @@ const student = {
         },
         {
             id: 'student-courses',
-            title: 'Courses',
+            title: 'Cursos',
             type: 'item',
             url: '/Student/Courses',
             icon: icons.IconTypography,
@@ -39,6 +39,35 @@ const student = {
             url: '/Student/Message',
             icon: icons.IconPalette,
             breadcrumbs: false
+        },
+        {
+            id: 'configuration',
+            title: 'Configurações',
+            type: 'collapse',
+            icon: icons.IconPalette,
+            children: [
+                {
+                    id: 'student-profile',
+                    title: 'Perfil',
+                    type: 'item',
+                    url: '/Student/Configuration/Profile',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'student-password',
+                    title: 'Trocar Senha',
+                    type: 'item',
+                    url: '/Student/Configuration/ResetPassword',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'student-delete',
+                    title: 'Deletar Conta',
+                    type: 'item',
+                    url: '/Student/Configuration/DeleteAccount',
+                    breadcrumbs: false
+                }
+            ]
         },
        
     ]
