@@ -6,16 +6,8 @@ import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
-  Checkbox,
-  Divider,
   FormControl,
-  FormControlLabel,
-  FormHelperText,
   Grid,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
   TextField,
   Typography,
   useMediaQuery
@@ -30,7 +22,7 @@ const ResetPassword = () => {
 
   return (
     <MainCard>
-      <Box>
+      <Box sx={{my: 2, textAlign: 'center'}}>
         <Typography component="h2" sx={{fontSize: '24px', my: 2, color: 'secondary.main', fontWeight: 600}}>Trocar senha</Typography>
       </Box>
       <Box>
