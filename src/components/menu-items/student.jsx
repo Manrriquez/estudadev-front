@@ -50,12 +50,14 @@ const student = {
                     id: 'student-profile',
                     title: 'Perfil',
                     type: 'item',
+                    icon: icons.IconPalette,
                     url: '/Student/Configuration/Profile',
                     breadcrumbs: false
                 },
                 {
                     id: 'student-password',
                     title: 'Trocar Senha',
+                    icon: icons.IconPalette,
                     type: 'item',
                     url: '/Student/Configuration/ResetPassword',
                     breadcrumbs: false
@@ -63,6 +65,7 @@ const student = {
                 {
                     id: 'student-delete',
                     title: 'Deletar Conta',
+                    icon: icons.IconPalette,
                     type: 'item',
                     url: '/Student/Configuration/DeleteAccount',
                     breadcrumbs: false
