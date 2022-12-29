@@ -4,7 +4,8 @@ import { Outlet } from 'react-router-dom';
 
 import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
-
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 import Breadcrumbs from '../../components/ui-component/extended/Breadcrumbs';
 import Header from '../Header/index';
 import Sidebar from '../Sidebar/index';
@@ -57,6 +58,13 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({
     })
 }));
 
+const fabStyle = {
+    position: 'fixed',
+    top: 'calc(100vh - 80px)',
+    right: 26,
+    color: '#ffffff'
+  };
+  
 
 const MainLayout = () => {
     const theme = useTheme();
@@ -79,8 +87,11 @@ const MainLayout = () => {
             <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
             
             <Main open={leftDrawerOpened} sx={{bgcolor: '#FAFAFA'}}>
-                <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
+                {/* <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign /> */}
                 <Outlet />
+                <Fab sx={fabStyle} color="secondary" aria-label="add">
+                    <AddIcon />
+                </Fab>
             </Main>
         </Box>
     );
