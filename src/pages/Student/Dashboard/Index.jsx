@@ -15,9 +15,8 @@ const StyledBoxCard = styled(Box)(({ theme }) => ({
 }));
 
 const CardStyle = styled(Card)(({ theme }) => ({
-  background: theme.secondary.light,
-  marginTop: '16px',
-  marginBottom: '16px',
+  background: theme.palette.secondary.light,
+  borderRadius: '12px',
   overflow: 'hidden',
   position: 'relative',
   '&:after': {
@@ -26,7 +25,7 @@ const CardStyle = styled(Card)(({ theme }) => ({
       width: '200px',
       height: '200px',
       border: '19px solid ',
-      borderColor: theme.palette.warning.main,
+      borderColor: theme.palette.secondary.main,
       borderRadius: '50%',
       top: '65px',
       right: '-150px'
@@ -37,7 +36,7 @@ const CardStyle = styled(Card)(({ theme }) => ({
       width: '200px',
       height: '200px',
       border: '3px solid ',
-      borderColor: theme.palette.warning.main,
+      borderColor: theme.palette.secondary.main,
       borderRadius: '50%',
       top: '145px',
       right: '-70px'
@@ -101,8 +100,8 @@ const StudenDashboard = () => {
                 <Grid item>
                   <Stack direction="row">
                     <AnimateButton>
-                        <Button variant="contained" color="warning" sx={{ boxShadow: 'none' }}>
-                            Go Premium
+                        <Button variant="contained" color="secondary" sx={{ boxShadow: 'none', color: '#ffffff' }}>
+                                      Go Premium
                         </Button>
                       </AnimateButton>
                   </Stack>
