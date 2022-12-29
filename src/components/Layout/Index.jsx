@@ -101,7 +101,8 @@ const MainLayout = () => {
             <Main open={leftDrawerOpened} sx={{bgcolor: '#FAFAFA'}}>
                 {/* <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign /> */}
                 <Outlet />
-                <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+                <Box sx={{ transform: 'translateZ(0px)', flexGrow: 1, position: 'fixed', left: 'calc(100% - 30px)',
+                 top: 'calc(100vh - 30px)' }}>
                     <SpeedDial
                         ariaLabel="SpeedDial basic example"
                         sx={{ position: 'absolute', bottom: 16, right: 16 }}

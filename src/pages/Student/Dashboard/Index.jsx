@@ -82,7 +82,14 @@ const StudenDashboard = () => {
 
       <Grid container justifyContent="center" spacing={{xs: 1, md: 2}}>
         <Grid item xs={12} lg={7}>
-          <StyledBoxCard>aaaaaaaaaaaaaaaaaaaaaa</StyledBoxCard>
+          <StyledBoxCard>
+            <Typography mb={3}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius officiis perferendis maiores modi in illum nobis, earum voluptate nihil placeat.</Typography>
+            <AnimateButton>
+                        <Button variant="contained" color="secondary" sx={{ boxShadow: 'none', color: '#ffffff' }}>
+                          Go Premium
+                        </Button>
+                      </AnimateButton>
+          </StyledBoxCard>
         </Grid>
         <Grid item xs={12} lg={5}>
           <CardStyle>
@@ -101,7 +108,7 @@ const StudenDashboard = () => {
                   <Stack direction="row">
                     <AnimateButton>
                         <Button variant="contained" color="secondary" sx={{ boxShadow: 'none', color: '#ffffff' }}>
-                                      Go Premium
+                          Go Premium
                         </Button>
                       </AnimateButton>
                   </Stack>
