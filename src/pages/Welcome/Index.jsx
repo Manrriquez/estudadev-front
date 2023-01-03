@@ -657,9 +657,7 @@ const Welcome = () => {
                   </Grid>
               </Grid>
             </Box>
-
             <Box component="section" mt={20}>
-              
                 <Grid container>
                   <StyledTypographyLine mb={5}>Lorem ipsum dolor sit amet Dolorem?</StyledTypographyLine>
 

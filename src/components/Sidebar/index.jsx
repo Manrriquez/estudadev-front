@@ -19,7 +19,6 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
     const isRouteStudent = useMatch("/Student");
     const isRouteTeacher = useMatch("/Teacher");
-
     const drawer = (
         <>
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
@@ -42,9 +41,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
             </MobileView>
         </>
     );
-
     const container = window !== undefined ? () => window.document.body : undefined;
-
     return (
         <Box component="nav" sx={{ flexShrink: { md: 0 }, width: matchUpMd ? drawerWidth : 'auto' }} aria-label="mailbox folders">
             <Drawer container={container} variant={matchUpMd ? 'persistent' : 'temporary'} anchor="left"
