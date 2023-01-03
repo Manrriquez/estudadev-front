@@ -96,7 +96,7 @@ const StudenDashboard = () => {
             <CardContent>
               <Grid container direction="column" spacing={2}>
                 <Grid item>
-                  <Typography variant="h4">Upgrade your plan</Typography>
+                  <Typography variant="h4">Realizar upgrade de plano</Typography>
                 </Grid>
                 <Grid item>
                   <Typography variant="subtitle2" color="grey.900" sx={{ opacity: 0.6 }}>
