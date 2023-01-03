@@ -86,7 +86,7 @@ const StudenDashboard = () => {
             <Typography mb={3}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius officiis perferendis maiores modi in illum nobis, earum voluptate nihil placeat.</Typography>
             <AnimateButton>
                         <Button variant="contained" color="secondary" sx={{ boxShadow: 'none', color: '#ffffff' }}>
-                          ASSINAR PLANO
+                          ASSINAR PLANO INDIVIDUAL
                         </Button>
                       </AnimateButton>
           </StyledBoxCard>
