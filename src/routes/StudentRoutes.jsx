@@ -38,7 +38,7 @@ const StudentRoutes = {
         {
             children: [
                 {
-                    path: 'Configuration/Profile',
+                    path: 'Profile',
                     element: <Profile />
                 }
             ]
@@ -46,7 +46,7 @@ const StudentRoutes = {
         {
             children: [
                 {
-                    path: 'Configuration/ResetPassword',
+                    path: 'ResetPassword',
                     element: <ResetPassword />
                 }
             ]
@@ -54,7 +54,7 @@ const StudentRoutes = {
         {
             children: [
                 {
-                    path: 'Configuration/DeleteAccount',
+                    path: 'DeleteAccount',
                     element: <DeleteAccount />
                 }
             ]

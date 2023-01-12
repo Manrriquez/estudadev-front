@@ -13,11 +13,11 @@ const icons = {
 
 const student = {
     id: 'Student',
-    title: 'Estudante',
+    title: 'PAINEL DO ESTUDANTE',
     type: 'group',
     children: [
         {
-            id: 'student-dashboard',
+            id: 'dashboard',
             title: 'Dashboard',
             type: 'item',
             url: '/Student/Dashboard',
@@ -25,7 +25,7 @@ const student = {
             breadcrumbs: false
         },
         {
-            id: 'student-courses',
+            id: 'courses',
             title: 'Cursos',
             type: 'item',
             url: '/Student/Courses',
@@ -33,7 +33,7 @@ const student = {
             breadcrumbs: false
         },
         {
-            id: 'student-message',
+            id: 'message',
             title: 'Mensagem Professor',
             type: 'item',
             url: '/Student/Message',
@@ -41,38 +41,30 @@ const student = {
             breadcrumbs: false
         },
         {
-            id: 'configuration',
-            title: 'Configurações',
-            type: 'collapse',
+            id: 'profile',
+            title: 'Perfil',
+            type: 'item',
+            url: '/Student/Profile',
             icon: icons.IconPalette,
-            children: [
-                {
-                    id: 'student-profile',
-                    title: 'Perfil',
-                    type: 'item',
-                    icon: icons.IconPalette,
-                    url: '/Student/Configuration/Profile',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'student-password',
-                    title: 'Trocar Senha',
-                    icon: icons.IconPalette,
-                    type: 'item',
-                    url: '/Student/Configuration/ResetPassword',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'student-delete',
-                    title: 'Deletar Conta',
-                    icon: icons.IconPalette,
-                    type: 'item',
-                    url: '/Student/Configuration/DeleteAccount',
-                    breadcrumbs: false
-                }
-            ]
+            breadcrumbs: false
         },
-       
+        {
+            id: 'forgot-password',
+            title: 'Trocar senha',
+            type: 'item',
+            url: '/Student/ForgotPassword',
+            icon: icons.IconPalette,
+            breadcrumbs: false
+        },
+        {
+            id: 'account-delete',
+            title: 'Deletar conta',
+            type: 'item',
+            url: '/Student/DeleteAccount',
+            icon: icons.IconPalette,
+            breadcrumbs: false
+        },
+      
     ]
 };
 
